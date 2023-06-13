@@ -1,67 +1,152 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <title>Dashboard</title>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta
-      name="description"
-      content="Meta descriptions may be included in search results to concisely summarize page content."
-    />
-    <link rel="shortcut icon" href="assets/img/favicon.ico" />
 
-    <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
-  </head>
+<head>
+  <meta charset="utf-8" />
+  <title>Page Title</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description"
+    content="Meta descriptions may be included in search results to concisely summarize page content." />
+  <link rel="shortcut icon" href="assets/img/favicon.ico" />
 
-  <body>
-    <div class="wrapper">
-      <!-- Main Content -->
-      <section class="main-content">
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-3">
-              <div class="card mini-cards">
-                <div class="header-with-icon">
-                  <span class="icon-wrapper">
-                    <img src="./assets/img/profit-ic.svg" alt="Profit" />
-                  </span>
-                  <h3 class="card-title">Profit</h3>
-                  <div class="dropdown">
-                    <button
-                      class="btn dropdown-toggle"
-                      type="button"
-                      data-bs-toggle="dropdown"
-                      aria-expanded="false"
-                    >
-                      <img src="./assets/img/three-dots-ic.svg" alt="Icon" />
-                    </button>
-                    <ul class="dropdown-menu">
-                      <li><a class="dropdown-item" href="#">Action 1</a></li>
-                      <li>
-                        <a class="dropdown-item" href="#">Another action</a>
-                      </li>
-                      <li>
-                        <a class="dropdown-item" href="#"
-                          >Something else here</a
-                        >
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-                <div class="card-content">
-                  <h2 class="number">$29,000</h2>
-                  <p>Jan 28, 2021</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <!-- End Main Content -->
+  <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <!-- Start Navbar -->
+    <nav class="sticky-top header">
+      <!-- <a class="navbar-brand" href="#"><img src="assets/img/logo.svg" alt="Company" /></a> -->
+      <form class="form-wrapper" role="search">
+        <input class="form-control" type="search" placeholder="Search" aria-label="Search" />
+        <button class="btn btn-primary" type="submit">
+          <img src="assets/img/search-ic.svg" alt="Search">
+        </button>
+      </form>
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item dropdown icon-dropdown">
+          <a class="nav-link icon-btn dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+            aria-expanded="false">
+            <img src="assets/img/notification-ic.svg" alt="Notification">
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Action</a></li>
+            <li>
+              <a class="dropdown-item" href="#">Another action</a>
+            </li>
+            <li>
+              <hr class="dropdown-divider" />
+            </li>
+            <li>
+              <a class="dropdown-item" href="#">Something else here</a>
+            </li>
+          </ul>
+        </li>
+        <li class="nav-item dropdown icon-dropdown">
+          <a class="nav-link icon-btn dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+            aria-expanded="false">
+            <img src="assets/img/message-ic.svg" alt="Message">
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Action</a></li>
+            <li>
+              <a class="dropdown-item" href="#">Another action</a>
+            </li>
+            <li>
+              <hr class="dropdown-divider" />
+            </li>
+            <li>
+              <a class="dropdown-item" href="#">Something else here</a>
+            </li>
+          </ul>
+        </li>
+        <li class="nav-item dropdown profile-dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <img src="assets/img/user-profile.png" alt="User">
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Action</a></li>
+            <li>
+              <a class="dropdown-item" href="#">Another action</a>
+            </li>
+            <li>
+              <hr class="dropdown-divider" />
+            </li>
+            <li>
+              <a class="dropdown-item" href="#">Something else here</a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+    <div class="sidebar">
+      <a href="#" title="Logo" class="logo">
+        <img src="assets/img/logo.svg" alt="Logo">
+      </a>
+      <ul>
+        <li>
+          <a href="#" title="Dashboard" class="active">
+            <img src="assets/img/dashboard-default-ic.svg" alt="Dashboard">
+            <img src="assets/img/dashboard-active-ic.svg" alt="Dashboard">
+            <span>Dashboard</span>
+          </a>
+        </li>
+        <li>
+          <a href="#" title="Innerpage">
+            <img src="assets/img/innerpage-default-ic.svg" alt="Innerpage">
+            <img src="assets/img/innerpage-active-ic.svg" alt="Innerpage">
+            <span>Innerpage</span>
+          </a>
+        </li>
+        <li>
+          <a href="#" title="Tasks">
+            <img src="assets/img/task-default-ic.svg" alt="Tasks">
+            <img src="assets/img/task-active-ic.svg" alt="Tasks">
+            <span>Tasks</span>
+          </a>
+        </li>
+        <li>
+          <a href="#" title="Setting">
+            <img src="assets/img/setting-default-ic.svg" alt="Setting">
+            <img src="assets/img/setting-active-ic.svg" alt="Setting">
+            <span>Setting</span>
+          </a>
+        </li>
+        <li>
+          <a href="#" title="Report">
+            <img src="assets/img/report-default-ic.svg" alt="Report">
+            <img src="assets/img/report-active-ic.svg" alt="Report">
+            <span>Report</span>
+          </a>
+        </li>
+        <li>
+          <a href="#" title="Chart">
+            <img src="assets/img/chart-default-ic.svg" alt="Chart">
+            <img src="assets/img/chart-active-ic.svg" alt="Chart">
+            <span>Chart</span>
+          </a>
+        </li>
+      </ul>
     </div>
+  </div>
+  <!-- End Navbar -->
 
-    <!-- JavaScripts -->
-    <script src="assets/js/script.js"></script>
-  </body>
+  <!-- Main Content -->
+  <section class="main-content overflow-hidden">
+    <div class="container-xxl">
+    </div>
+  </section>
+  <!-- End Main Content -->
+  </div>
+  <!-- Start Footer -->
+  <footer class="footer">
+    <p class="copyright">&copy; 2023 Tatvasoft</p>
+  </footer>
+  <!-- End Footer -->
+
+  <!-- JavaScripts -->
+  <script src="assets/js/script.js"></script>
+</body>
+
 </html>
