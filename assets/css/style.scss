@@ -1,6 +1,6 @@
 /*
 ------------------------------------------------------------
-Project Name : Sample Project;
+Project Name : vs-theme-1;
 ------------------------------------------------------------
 */
 .animation-block {
@@ -10,5 +10,61 @@ Project Name : Sample Project;
   &.show {
     opacity: 1;
     visibility: visible;
+  }
+}
+
+
+/* Login Page
+--------------------------------------------------------------------------------------------------------*/
+.login-row{min-height: calc(100vh - 32px);}
+.login-container{background: $primary-gradient;padding: 16px; max-width: 100%;
+  .mockup-col{display: flex;}
+  .login-mockup{margin: auto;}
+  .content-col{display: flex;}
+  .login-mockup img{margin: auto;display: block;max-width: 100%;}
+  .login-content{max-width: 496px;text-align: center;margin: auto;width: 100%;}
+  .card{ padding: 59px 48px 70px; border-radius: 18px;
+  .logo-block{display: block;margin: 0 auto;width: max-content;}
+  .card-title{margin: 0;padding: 44px 0 39px;font-weight: 500;font-size: 24px;line-height: 36px;color: $text-dark;}
+  }
+}
+.login-content .form-floating {margin-bottom: 29px;}
+.login-content .form-floating:last-child {margin-bottom: 20px;}
+.login-content .forgot-password{display: flex;justify-content:space-between;margin-bottom: 30px;
+  .primary-link{margin-top: 2px;}
+}
+
+
+
+.mini-cards{background-image: url('./assets/images/ellipse-bg.svg'); background-repeat: no-repeat;background-position: bottom right;box-shadow: 0px 4px 16px rgba(23, 102, 139, 0.2);
+    border-radius: 8px;transition: all 300ms ease; padding: 16px 20px 69px;position: relative;
+  .icon-wrapper{width: 44px;height: 44px;border-radius: 50%; background: var(--primary-gradient); display: flex;align-items: center;justify-content: center;margin-right: 10px;}
+    h3{margin: 0;font-weight: 600;font-size: 32px;line-height: 48px;color: #444444;}
+    p{margin: 0;font-size: 16px;line-height: 24px;color: #444444;}
+    .card-header{display: flex;align-items: center;justify-content: space-between;margin-bottom: 27px;}
+    .card-header h4{font-weight: 600;font-size: 22px;line-height: 33px;letter-spacing: 0.04em;color: #115186;margin: 0;}
+} 
+.header-with-icon{display: flex;align-items: center;margin-bottom: 18px;
+  .card-dropdown{margin-left: auto;margin-right: -16px;}
+  h5{font-weight: 500;font-size: 18px;line-height: 27px;color: #115186;margin-bottom: 0;}
+}
+
+
+
+/* Responsive Media Query
+--------------------------------------------------------------------------------------------------------*/
+/* @media (max-width:1199px) {} */
+@media (max-width:991px) {
+  .login-container {
+    .card{padding: 50px 20px 60px;}
+  }
+}
+
+@media (max-width:767px) {
+  .login-container {
+    .mockup-col{display: none;}
+    .content-col{position: relative;}
+    .content-col::before{content: '';position: absolute; inset: 0; background-image: url('../img/mockup.svg'); background-size: 100%;background-repeat: no-repeat; width: 100%;opacity: 0.2;}
+    .card-title{margin: 0;padding: 30px 0;}
   }
 }

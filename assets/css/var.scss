@@ -1,6 +1,6 @@
 // Variable overrides first
 $theme-colors: (
-  "primary": #0d6efd,
+  "primary": #1A6BAF,
   "secondary": #6c757d,
   "success": #198754,
   "danger": #dc3545,
@@ -9,6 +9,13 @@ $theme-colors: (
   "light": #f8f9fa,
   "dark": #212529,
 );
+
+
+$primary: #1A6BAF;
+$primary-gradient: linear-gradient(91.76deg, #1669AD 1.49%, #4484BA 98.58%);
+$text-dark: #444444;
+$text-light: #000000;
+$text-white: #FFFFFF;
 
 $grid-breakpoints: (
   xs: 0,
