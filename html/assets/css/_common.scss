@@ -1,0 +1,47 @@
+/* Common Styles -------------------------------------
+--------------------------------------------------- */
+body:not(.page-loaded) {
+  display: none;
+}
+* {
+  outline: none !important;
+}
+.window-resizing *,
+body:not(.page-loaded) * {
+  transition: none !important;
+}
+a {
+  transition: all 0.3s;
+}
+html,
+body {
+  min-width: 360px;
+  min-height: 100vh;
+}
+.wrapper {
+  min-height: 100vh;
+}
+a {
+  color: #000;
+  text-decoration: none;
+}
+a:hover {
+  color: #999;
+  text-decoration: none;
+}
+.alert {
+  color: #ffffff !important;
+}
+.btn {
+  margin-bottom: 8px;
+}
+[data-bs-theme="dark"] {
+  --bs-success-bg-subtle: #105637;
+}
+.form-control {
+  box-shadow: none !important;
+  outline: none !important;
+}
+.dropdown-toggle::after {
+  display: none;
+}

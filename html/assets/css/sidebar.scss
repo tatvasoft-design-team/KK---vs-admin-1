@@ -1,0 +1,58 @@
+.sidebar {
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  background-color: $primary;
+  width: 260px;
+  padding: 47px 20px 0;
+  .logo {
+    display: block;
+    max-width: 189px;
+    width: 100%;
+    margin: 0 auto 50px;
+    img {
+      display: block;
+    }
+  }
+  ul {
+    list-style: none;
+    padding: 0;
+    li {
+      padding-bottom: 16px;
+      a {
+        color: $white;
+        display: flex;
+        align-items: center;
+        border-radius: 12px;
+        padding: 17px 14px;
+        &.active {
+          background-color: $white;
+          color: $primary;
+          img {
+            &:first-child {
+              opacity: 0;
+              visibility: hidden;
+            }
+            &:nth-child(2) {
+              opacity: 1;
+              visibility: visible;
+            }
+          }
+        }
+      }
+      img {
+        display: block;
+        transition: all 0.3s;
+        &:nth-child(2) {
+          margin-left: -26px;
+          opacity: 0;
+          visibility: hidden;
+        }
+      }
+      span {
+        margin-left: 20px;
+      }
+    }
+  }
+}
