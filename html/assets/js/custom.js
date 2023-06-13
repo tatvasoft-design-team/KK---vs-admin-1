@@ -23,9 +23,9 @@ function footerAdj() {
   document.querySelector(".footer").style.marginTop = "-" + footerH + "px";
   document.querySelector(".wrapper").style.paddingBottom = footerH + "px";
 };
-footerAdj();
+// footerAdj();
 window.addEventListener("resize", function () {
-  footerAdj();
+  // footerAdj();
 });
 
 // Add remove class when window resize finished
@@ -43,10 +43,4 @@ window.addEventListener("resize", function () {
 // On Load Page Visible
 window.addEventListener("load", function () {
   document.body.classList.add("page-loaded");
-  animationStart();
 });
-
-// Page Animation 
-function animationStart() {
-  AOS.init({ once: true, offset: 100, easing: "ease-out-sine", duration: 800 });
-};

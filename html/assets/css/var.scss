@@ -9,9 +9,13 @@ $theme-colors: (
   "light": #f8f9fa,
   "dark": #212529,
 );
-// colors
+
 $primary: #1a6baf;
-$dark-black: #444444;
+$primary-gradient: linear-gradient(91.76deg, #1669ad 1.49%, #4484ba 98.58%);
+$text-dark: #444444;
+$text-light: #000000;
+$text-white: #ffffff;
+
 $grid-breakpoints: (
   xs: 0,
   sm: 576px,
