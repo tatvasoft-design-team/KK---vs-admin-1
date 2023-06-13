@@ -1,0 +1,10 @@
+/* Header --------------------------------------------
+--------------------------------------------------- */
+.header:after {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  display: block;
+  content: "";
+  background: var(--bs-primary);
+}
