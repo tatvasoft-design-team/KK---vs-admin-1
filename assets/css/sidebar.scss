@@ -4,7 +4,7 @@
   top: 0;
   bottom: 0;
   background-color: $primary;
-  width: 260px;
+  width: var(--sidebar-width);
   padding: 47px 20px 0;
   .logo {
     display: block;
