@@ -3,7 +3,7 @@ $theme-colors: (
   "primary": #1a6baf,
   "secondary": #6c757d,
   "success": #198754,
-  "danger": #dc3545,
+  "danger": #f13838,
   "warning": #ffc107,
   "info": #0dcaf0,
   "light": #f8f9fa,
@@ -12,9 +12,12 @@ $theme-colors: (
 
 $primary: #1a6baf;
 $primary-gradient: linear-gradient(91.76deg, #1669ad 1.49%, #4484ba 98.58%);
+$primary-variant-1: #1d79c3;
+$primary-variant-2: #114978;
 $text-dark: #444444;
 $text-light: #000000;
 $text-white: #ffffff;
+$danger: #f13838;
 
 $grid-breakpoints: (
   xs: 0,
