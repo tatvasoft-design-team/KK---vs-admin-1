@@ -150,8 +150,24 @@
             width: auto;
             color: $primary;
             padding: 0;
+            position: relative;
             img {
               margin-left: 4px;
+            }
+            &:after {
+              content: "";
+              position: absolute;
+              left: 0;
+              bottom: 0;
+              height: 1px;
+              width: 0;
+              background: $primary;
+              transition: all 0.3s ease-out;
+            }
+            &:hover {
+              &:after {
+                width: 100%;
+              }
             }
           }
         }
