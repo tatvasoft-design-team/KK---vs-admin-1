@@ -556,6 +556,19 @@ h6 {
     }
   }
 }
+.table-responsive{
+  nav{display: flex;
+    ul{margin-left: auto;}
+    li{
+      a{width: 32px;height: 32px;border: 1px solid #878787; border-radius: 50%;letter-spacing: 0.04em;color: #878787; margin: 0 5px; display: flex; align-items: center; justify-content: center;
+        &.active{background-color: $primary;}
+      }
+    }
+  }
+}
+
+
+
 /* Innerpage
 --------------------------------------------------------------------------------------------------------*/
 .innerpage .primary-card .card-header {
