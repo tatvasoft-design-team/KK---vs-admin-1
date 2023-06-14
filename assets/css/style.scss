@@ -141,12 +141,13 @@ Project Name : vs-theme-1;
 
 /* Dashboard
 --------------------------------------------------------------------------------------------------------*/
+.main-content{padding: 10px 38px;}
 .primary-row {
   --bs-gutter-x: 30px;
   --bs-gutter-y: 30px;
 }
 .main-container {
-  max-width: calc(100% - 30px);
+  max-width: 100%;
 }
 .mini-cards {
   box-shadow: 0px 4px 16px rgba(23, 102, 139, 0.2);
