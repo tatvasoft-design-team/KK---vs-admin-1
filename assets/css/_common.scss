@@ -27,11 +27,11 @@ body {
   min-height: 100vh;
 }
 a {
-  color: #000;
+  color: $black;
   text-decoration: none;
 }
 a:hover {
-  color: #999;
+  color: $grey-variant-2;
   text-decoration: none;
 }
 .form-control {
@@ -48,21 +48,79 @@ a:hover {
 .dropdown-toggle {
   box-shadow: none !important;
 }
+
+/* Dropdown Menu
+-------------------------------------------------------------------------------------------------------*/
+.dropdown {
+  .dropdown-menu {
+    border-radius: 8px;
+    box-shadow: 0px 4px 20px rgba(43, 117, 179, 0.25);
+    border: none;
+    .dropdown-item {
+      color: $text-dark;
+      padding: 8px 16px;
+    }
+  }
+}
+.primary-dropdown-menu {
+  li {
+    position: relative;
+    &:after {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 0;
+      height: 100%;
+      background-color: $light-variant-1;
+      transition: all 0.3s ease-in-out;
+    }
+    &:hover {
+      &:after {
+        width: 100%;
+      }
+    }
+    .dropdown-item {
+      position: relative;
+      z-index: 1;
+      background-color: transparent !important;
+    }
+  }
+}
+
+/* Select
+--------------------------------------------------------------------------------------------------------*/
+.form-select {
+  box-shadow: none !important;
+  --bs-form-select-bg-img: url("../img/dropdown-down-arrow.svg");
+  border-color: $grey-variant-1;
+  &:focus {
+    border-color: $primary;
+  }
+}
+
 /* Form floating
 --------------------------------------------------------------------------------------------------------*/
-.form-floating > .form-control,
-.form-floating > .form-control-plaintext {
-  padding: 12px;
-}
 .form-floating > label {
-  top: -2px;
+  top: 14px;
+  transition: all 0.3s;
+  color: #aaaaaa;
+  padding: 0 4px;
+  height: auto;
+  left: 12px;
+}
+.form-floating > textarea.form-control {
+  height: auto;
 }
 .form-floating > .form-control,
 .form-floating > .form-control-plaintext,
 .form-floating > .form-select {
+  font-size: 14px;
   height: 50px;
   min-height: 50px;
-  line-height: 1.25;
+  line-height: 24px;
+  color: $text-dark;
+  padding: 12px 16px;
 }
 .form-floating > .form-control:-webkit-autofill ~ label {
   color: rgba(var(--bs-body-color-rgb), 0.65);
@@ -79,7 +137,9 @@ a:hover {
 .form-floating > .form-control-plaintext ~ label,
 .form-floating > .form-select ~ label {
   color: $primary;
-  transform: scale(0.85) translateY(-1.5rem) translateX(0.15rem);
+  transform: scale(0.85);
+  top: -10px;
+  background-color: $white;
 }
 
 .form-floating > .form-control:focus,
@@ -93,7 +153,14 @@ a:hover {
   font-weight: 400;
   font-size: 14px;
   line-height: 20px;
-  color: $text-light;
+  color: $text-dark;
+  border-color: $grey-variant-1;
+  &:focus {
+    border-color: $primary;
+  }
+}
+.innerpage .form-floating {
+  margin-bottom: 20px;
 }
 .password-btn{position: absolute; top: 9px;right: 8px; border-radius: 50%; width: 34px; height: 34px; border: 0 !important;
   >img{position: absolute;left: 50%;top: 50%; transform: translate(-50%,-50%);}
@@ -147,9 +214,55 @@ a:hover {
   font-weight: 600;
   font-size: 18px;
   line-height: 26px;
-  color: $text-white;
+  color: $white;
   padding: 12px;
   border-radius: 10px;
 }
 
-.main{max-width: calc(100% - var(--sidebar-width)); margin-left: var(--sidebar-width);}
+.main {
+  max-width: calc(100% - var(--sidebar-width));
+  margin-left: var(--sidebar-width);
+}
+
+/* File Upload
+--------------------------------------------------------------------------------------------------------*/
+.file-upload {
+  height: 44px;
+  margin-bottom: 28px;
+  align-items: center;
+  label {
+    border: 0;
+    color: $white;
+    display: flex;
+    align-items: center;
+    background-color: $primary;
+    border-radius: 12px !important;
+    cursor: pointer;
+    padding: 10px 19px;
+    z-index: 3;
+    transition: all 0.3s;
+    position: relative;
+    margin-right: 10px;
+    gap: 8px;
+  }
+  span {
+    letter-spacing: 0.04em;
+    font-weight: 500;
+  }
+  .form-control {
+    height: 36px;
+    border: none;
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    opacity: 0;
+  }
+  p {
+    margin-bottom: 0;
+    letter-spacing: 0.04em;
+    color: $text-grey;
+  }
+}
