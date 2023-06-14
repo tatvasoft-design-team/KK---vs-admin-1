@@ -52,7 +52,8 @@
         transition: all 0.3s ease-in-out;
         border-radius: 50%;
       }
-      &:hover {
+      &:hover,
+      &:focus {
         &:after {
           transform: translate(-50%, -50%) scale(50);
         }
@@ -87,7 +88,8 @@
         font-size: 12px;
         line-height: 18px;
       }
-      &:hover {
+      &:hover,
+      &:focus {
         background-color: rgba($color: $primary, $alpha: 0.07);
       }
     }
