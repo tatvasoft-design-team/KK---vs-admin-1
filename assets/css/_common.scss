@@ -95,7 +95,10 @@ a:hover {
   line-height: 20px;
   color: $text-light;
 }
-
+.password-btn{position: absolute; top: 9px;right: 8px; border-radius: 50%; width: 34px; height: 34px; border: 0 !important;
+  >img{position: absolute;left: 50%;top: 50%; transform: translate(-50%,-50%);}
+  &:hover,&:focus{background-color: rgba($color: $primary, $alpha: 0.2);}
+}
 /* Form Check
 --------------------------------------------------------------------------------------------------------*/
 .form-check .form-check-input {

@@ -284,7 +284,7 @@
         <section class="main-content">
           <div class="row primary-row">
             <!-- Mini Cards Start -->
-            <div class="col-lg-3 col-sm-6">
+            <div class="col-xl-3 col-sm-6">
               <div class="card mini-cards">
                 <div class="header-with-icon">
                   <span class="icon-wrapper">
@@ -323,7 +323,7 @@
                 </div>
               </div>
             </div>
-            <div class="col-lg-3 col-sm-6">
+            <div class="col-xl-3 col-sm-6">
               <div class="card mini-cards">
                 <div class="header-with-icon">
                   <span class="icon-wrapper">
@@ -362,7 +362,7 @@
                 </div>
               </div>
             </div>
-            <div class="col-lg-3 col-sm-6">
+            <div class="col-xl-3 col-sm-6">
               <div class="card mini-cards">
                 <div class="header-with-icon">
                   <span class="icon-wrapper">
@@ -401,7 +401,7 @@
                 </div>
               </div>
             </div>
-            <div class="col-lg-3 col-sm-6">
+            <div class="col-xl-3 col-sm-6">
               <div class="card mini-cards">
                 <div class="header-with-icon">
                   <span class="icon-wrapper">
@@ -470,7 +470,12 @@
                 </div>
                 <div class="card-content">
                   <div class="chart-container">
-                    <img src="./assets/img/graph.png" alt="Graph" />
+                    <canvas
+                      id="mainChart"
+                      aria-label="chart"
+                      role="img"
+                      height="200"
+                    ></canvas>
                   </div>
                 </div>
               </div>
@@ -904,6 +909,7 @@
     </div>
 
     <!-- JavaScripts -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="assets/js/script.js"></script>
   </body>
 </html>

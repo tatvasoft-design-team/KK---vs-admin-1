@@ -21,7 +21,14 @@
         <div class="row login-row">
           <div class="col-md-6 col-12 mockup-col">
             <div class="login-mockup">
-              <img src="./assets/img/mockup.svg" alt="Mockup" />
+              <object
+                type="image/svg+xml"
+                data="./assets/img/mockup-animated.svg"
+                class="svg-obj"
+              >
+                <img src="./assets/img/mockup-animated.svg" alt="Mockup" />
+              </object>
+              <!-- <img src="./assets/img/mockup-animated.svg" alt="Mockup" /> -->
             </div>
           </div>
           <div class="col-md-6 col-12 content-col">
@@ -49,6 +56,12 @@
                       placeholder="Password"
                     />
                     <label for="floatingInput">Password</label>
+                    <button class="btn password-btn" type="button">
+                      <img
+                        src="./assets/img/password-eye-close.svg"
+                        alt="Icon"
+                      />
+                    </button>
                   </div>
                 </form>
                 <div class="forgot-password">
