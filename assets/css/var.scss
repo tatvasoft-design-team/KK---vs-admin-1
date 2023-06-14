@@ -19,6 +19,10 @@ $text-light: #000000;
 $text-white: #ffffff;
 $danger: #f13838;
 
+:root{
+  --sidebar-width: 260px
+}
+
 $grid-breakpoints: (
   xs: 0,
   sm: 576px,
