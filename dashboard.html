@@ -1,242 +1,287 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Dashboard</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Meta descriptions may be included in search results to concisely summarize page content."
+    />
+    <link rel="shortcut icon" href="assets/img/favicon.ico" />
 
-<head>
-  <meta charset="utf-8" />
-  <title>Dashboard</title>
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description"
-    content="Meta descriptions may be included in search results to concisely summarize page content." />
-  <link rel="shortcut icon" href="assets/img/favicon.ico" />
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
+  </head>
 
-  <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
-</head>
-
-<body>
-  <div class="wrapper">
-    <!-- Start Navbar -->
-    <div class="sidebar">
-      <a href="#" title="Logo" class="logo">
-        <img src="assets/img/logo.svg" alt="Logo" />
-      </a>
-      <ul>
-        <li>
-          <a href="#" title="Dashboard" class="active">
-            <img src="assets/img/dashboard-default-ic.svg" alt="Dashboard" />
-            <img src="assets/img/dashboard-active-ic.svg" alt="Dashboard" />
-            <span>Dashboard</span>
-          </a>
-        </li>
-        <li>
-          <a href="#" title="Innerpage">
-            <img src="assets/img/innerpage-default-ic.svg" alt="Innerpage" />
-            <img src="assets/img/innerpage-active-ic.svg" alt="Innerpage" />
-            <span>Innerpage</span>
-          </a>
-        </li>
-        <li>
-          <a href="#" title="Tasks">
-            <img src="assets/img/task-default-ic.svg" alt="Tasks" />
-            <img src="assets/img/task-active-ic.svg" alt="Tasks" />
-            <span>Tasks</span>
-          </a>
-        </li>
-        <li>
-          <a href="#" title="Setting">
-            <img src="assets/img/setting-default-ic.svg" alt="Setting" />
-            <img src="assets/img/setting-active-ic.svg" alt="Setting" />
-            <span>Setting</span>
-          </a>
-        </li>
-        <li>
-          <a href="#" title="Report">
-            <img src="assets/img/report-default-ic.svg" alt="Report" />
-            <img src="assets/img/report-active-ic.svg" alt="Report" />
-            <span>Report</span>
-          </a>
-        </li>
-        <li>
-          <a href="#" title="Chart">
-            <img src="assets/img/chart-default-ic.svg" alt="Chart" />
-            <img src="assets/img/chart-active-ic.svg" alt="Chart" />
-            <span>Chart</span>
-          </a>
-        </li>
-      </ul>
-    </div>
-    <!-- End Navbar -->
-    <main class="main">
-      <!-- Start Header -->
-      <nav class="sticky-top header">
-        <form class="form-wrapper" role="search">
-          <input class="form-control" type="search" placeholder="Search" aria-label="Search" />
-          <button class="btn btn-primary" type="submit">
-            <img src="assets/img/search-ic.svg" alt="Search" />
-          </button>
-        </form>
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item dropdown icon-dropdown notification-dropdown">
-            <a class="nav-link icon-btn dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-              aria-expanded="false">
-              <img src="assets/img/notification-ic.svg" alt="Notification" />
-              <span>2</span>
+  <body>
+    <div class="wrapper">
+      <!-- Start Navbar -->
+      <div class="sidebar">
+        <a href="#" title="Logo" class="logo">
+          <img src="assets/img/logo.svg" alt="Logo" />
+        </a>
+        <ul>
+          <li>
+            <a href="#" title="Dashboard" class="active">
+              <img src="assets/img/dashboard-default-ic.svg" alt="Dashboard" />
+              <img src="assets/img/dashboard-active-ic.svg" alt="Dashboard" />
+              <span>Dashboard</span>
             </a>
-            <ul class="dropdown-menu dropdown-menu-end">
-              <li>Notifications</li>
-              <li>
-                <ul>
-                  <li>
-                    <a class="dropdown-item" href="#">
-                      <span class="icon"><img src="assets/img/alert-ic.svg" alt="Alert" /></span>
-                      <div class="content">
-                        <p>Lorem Ipsum Dummy Text</p>
-                        <span>1m ago</span>
-                      </div>
-                    </a>
-                  </li>
-                  <li>
-                    <a class="dropdown-item" href="#">
-                      <span class="icon"><img src="assets/img/alert-ic.svg" alt="Alert" /></span>
-                      <div class="content">
-                        <p>Lorem Ipsum Dummy Text</p>
-                        <span>1s ago</span>
-                      </div>
-                    </a>
-                  </li>
-                  <li>
-                    <a class="dropdown-item" href="#">
-                      <span class="icon"><img src="assets/img/alert-ic.svg" alt="Alert" /></span>
-                      <div class="content">
-                        <p>Lorem Ipsum Dummy Text</p>
-                        <span>1hr ago</span>
-                      </div>
-                    </a>
-                  </li>
-                  <li>
-                    <a class="dropdown-item" href="#">
-                      <span class="icon"><img src="assets/img/alert-ic.svg" alt="Alert" /></span>
-                      <div class="content">
-                        <p>Lorem Ipsum Dummy Text</p>
-                        <span>1m 20s ago</span>
-                      </div>
-                    </a>
-                  </li>
-                  <li>
-                    <a class="dropdown-item" href="#">
-                      <span class="icon"><img src="assets/img/alert-ic.svg" alt="Alert" /></span>
-                      <div class="content">
-                        <p>Lorem Ipsum Dummy Text</p>
-                        <span>1hr 20m 20s ago</span>
-                      </div>
-                    </a>
-                  </li>
-                </ul>
-              </li>
-              <li>
-                <a href="#">View All
-                  <img src="assets/img/arrow-down-ic.svg" alt="Arrow Down" /></a>
-              </li>
-            </ul>
           </li>
-          <li class="nav-item dropdown icon-dropdown msg-dropdown">
-            <a class="nav-link icon-btn dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-              aria-expanded="false">
-              <img src="assets/img/message-ic.svg" alt="Message" />
-              <span>2</span>
+          <li>
+            <a href="#" title="Innerpage">
+              <img src="assets/img/innerpage-default-ic.svg" alt="Innerpage" />
+              <img src="assets/img/innerpage-active-ic.svg" alt="Innerpage" />
+              <span>Innerpage</span>
             </a>
-            <ul class="dropdown-menu dropdown-menu-end">
-              <li>Messages</li>
-              <li>
-                <ul>
-                  <li>
-                    <a class="dropdown-item" href="#">
-                      <span class="icon"><img src="assets/img/user-img.png" alt="User Pic" /></span>
-                      <div class="chat-content">
-                        <div class="name-block">
-                          <p>John Doe</p>
-                          <span>08:01 PM</span>
-                        </div>
-                        <span>Hi, How are you.</span>
-                      </div>
-                    </a>
-                  </li>
-                  <li>
-                    <a class="dropdown-item" href="#">
-                      <span class="icon"><img src="assets/img/user-img.png" alt="User Pic" /></span>
-                      <div class="chat-content">
-                        <div class="name-block">
-                          <p>John Doe</p>
-                          <span>08:01 PM</span>
-                        </div>
-                        <span>Hi, How are you. What are you doing</span>
-                      </div>
-                    </a>
-                  </li>
-                  <li>
-                    <a class="dropdown-item" href="#">
-                      <span class="icon"><img src="assets/img/user-img.png" alt="User Pic" /></span>
-                      <div class="chat-content">
-                        <div class="name-block">
-                          <p>John Doe</p>
-                          <span>08:01 PM</span>
-                        </div>
-                        <span>Hi, How are you.o</span>
-                      </div>
-                    </a>
-                  </li>
-                  <li>
-                    <a class="dropdown-item" href="#">
-                      <span class="icon"><img src="assets/img/user-img.png" alt="User Pic" /></span>
-                      <div class="chat-content">
-                        <div class="name-block">
-                          <p>John Doe</p>
-                          <span>08:01 PM</span>
-                        </div>
-                        <span>Hi, How are you. What are you doing</span>
-                      </div>
-                    </a>
-                  </li>
-                  <li>
-                    <a class="dropdown-item" href="#">
-                      <span class="icon"><img src="assets/img/user-img.png" alt="User Pic" /></span>
-                      <div class="chat-content">
-                        <div class="name-block">
-                          <p>John Doe</p>
-                          <span>08:01 PM</span>
-                        </div>
-                        <span>Hi, How are you.m 20s ago</span>
-                      </div>
-                    </a>
-                  </li>
-                </ul>
-              </li>
-              <li>
-                <a href="#">View All
-                  <img src="assets/img/arrow-down-ic.svg" alt="Arrow Down" /></a>
-              </li>
-            </ul>
           </li>
-          <li class="nav-item dropdown profile-dropdown">
-            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              <img src="assets/img/user-profile.png" alt="User" />
+          <li>
+            <a href="#" title="Tasks">
+              <img src="assets/img/task-default-ic.svg" alt="Tasks" />
+              <img src="assets/img/task-active-ic.svg" alt="Tasks" />
+              <span>Tasks</span>
             </a>
-            <ul class="dropdown-menu dropdown-menu-end profile-dropdown-menu">
-              <li>
-                <a class="dropdown-item" href="#">
-                  <img src="assets/img/logout.svg" alt="Logout" />
-                  <span>Logout</span>
-                </a>
-              </li>
-            </ul>
+          </li>
+          <li>
+            <a href="#" title="Setting">
+              <img src="assets/img/setting-default-ic.svg" alt="Setting" />
+              <img src="assets/img/setting-active-ic.svg" alt="Setting" />
+              <span>Setting</span>
+            </a>
+          </li>
+          <li>
+            <a href="#" title="Report">
+              <img src="assets/img/report-default-ic.svg" alt="Report" />
+              <img src="assets/img/report-active-ic.svg" alt="Report" />
+              <span>Report</span>
+            </a>
+          </li>
+          <li>
+            <a href="#" title="Chart">
+              <img src="assets/img/chart-default-ic.svg" alt="Chart" />
+              <img src="assets/img/chart-active-ic.svg" alt="Chart" />
+              <span>Chart</span>
+            </a>
           </li>
         </ul>
-      </nav>
-      <!-- End Header -->
+      </div>
+      <!-- End Navbar -->
+      <main class="main">
+        <!-- Start Header -->
+        <nav class="sticky-top header">
+          <form class="form-wrapper" role="search">
+            <input
+              class="form-control"
+              type="search"
+              placeholder="Search"
+              aria-label="Search"
+            />
+            <button class="btn btn-primary" type="submit">
+              <img src="assets/img/search-ic.svg" alt="Search" />
+            </button>
+          </form>
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item dropdown icon-dropdown notification-dropdown">
+              <a
+                class="nav-link icon-btn dropdown-toggle"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                <img src="assets/img/notification-ic.svg" alt="Notification" />
+                <span>2</span>
+              </a>
+              <ul class="dropdown-menu dropdown-menu-end">
+                <li>Notifications</li>
+                <li>
+                  <ul>
+                    <li>
+                      <a class="dropdown-item" href="#">
+                        <span class="icon"
+                          ><img src="assets/img/alert-ic.svg" alt="Alert"
+                        /></span>
+                        <div class="content">
+                          <p>Lorem Ipsum Dummy Text</p>
+                          <span>1m ago</span>
+                        </div>
+                      </a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="#">
+                        <span class="icon"
+                          ><img src="assets/img/alert-ic.svg" alt="Alert"
+                        /></span>
+                        <div class="content">
+                          <p>Lorem Ipsum Dummy Text</p>
+                          <span>1s ago</span>
+                        </div>
+                      </a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="#">
+                        <span class="icon"
+                          ><img src="assets/img/alert-ic.svg" alt="Alert"
+                        /></span>
+                        <div class="content">
+                          <p>Lorem Ipsum Dummy Text</p>
+                          <span>1hr ago</span>
+                        </div>
+                      </a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="#">
+                        <span class="icon"
+                          ><img src="assets/img/alert-ic.svg" alt="Alert"
+                        /></span>
+                        <div class="content">
+                          <p>Lorem Ipsum Dummy Text</p>
+                          <span>1m 20s ago</span>
+                        </div>
+                      </a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="#">
+                        <span class="icon"
+                          ><img src="assets/img/alert-ic.svg" alt="Alert"
+                        /></span>
+                        <div class="content">
+                          <p>Lorem Ipsum Dummy Text</p>
+                          <span>1hr 20m 20s ago</span>
+                        </div>
+                      </a>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#"
+                    >View All
+                    <img src="assets/img/arrow-down-ic.svg" alt="Arrow Down"
+                  /></a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown icon-dropdown msg-dropdown">
+              <a
+                class="nav-link icon-btn dropdown-toggle"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                <img src="assets/img/message-ic.svg" alt="Message" />
+                <span>2</span>
+              </a>
+              <ul class="dropdown-menu dropdown-menu-end">
+                <li>Messages</li>
+                <li>
+                  <ul>
+                    <li>
+                      <a class="dropdown-item" href="#">
+                        <span class="icon"
+                          ><img src="assets/img/user-img.png" alt="User Pic"
+                        /></span>
+                        <div class="chat-content">
+                          <div class="name-block">
+                            <p>John Doe</p>
+                            <span>08:01 PM</span>
+                          </div>
+                          <span>Hi, How are you.</span>
+                        </div>
+                      </a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="#">
+                        <span class="icon"
+                          ><img src="assets/img/user-img.png" alt="User Pic"
+                        /></span>
+                        <div class="chat-content">
+                          <div class="name-block">
+                            <p>John Doe</p>
+                            <span>08:01 PM</span>
+                          </div>
+                          <span>Hi, How are you. What are you doing</span>
+                        </div>
+                      </a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="#">
+                        <span class="icon"
+                          ><img src="assets/img/user-img.png" alt="User Pic"
+                        /></span>
+                        <div class="chat-content">
+                          <div class="name-block">
+                            <p>John Doe</p>
+                            <span>08:01 PM</span>
+                          </div>
+                          <span>Hi, How are you.o</span>
+                        </div>
+                      </a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="#">
+                        <span class="icon"
+                          ><img src="assets/img/user-img.png" alt="User Pic"
+                        /></span>
+                        <div class="chat-content">
+                          <div class="name-block">
+                            <p>John Doe</p>
+                            <span>08:01 PM</span>
+                          </div>
+                          <span>Hi, How are you. What are you doing</span>
+                        </div>
+                      </a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="#">
+                        <span class="icon"
+                          ><img src="assets/img/user-img.png" alt="User Pic"
+                        /></span>
+                        <div class="chat-content">
+                          <div class="name-block">
+                            <p>John Doe</p>
+                            <span>08:01 PM</span>
+                          </div>
+                          <span>Hi, How are you.m 20s ago</span>
+                        </div>
+                      </a>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#"
+                    >View All
+                    <img src="assets/img/arrow-down-ic.svg" alt="Arrow Down"
+                  /></a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown profile-dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                <img src="assets/img/user-profile.png" alt="User" />
+              </a>
+              <ul class="dropdown-menu dropdown-menu-end profile-dropdown-menu">
+                <li>
+                  <a class="dropdown-item" href="#">
+                    <img src="assets/img/logout.svg" alt="Logout" />
+                    <span>Logout</span>
+                  </a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+        <!-- End Header -->
 
-      <!-- Main Content -->
-      <section class="main-content">
-        <div class="container main-container">
+        <!-- Main Content -->
+        <section class="main-content">
           <div class="row primary-row">
             <!-- Mini Cards Start -->
             <div class="col-lg-3 col-sm-6">
@@ -247,16 +292,23 @@
                   </span>
                   <h3 class="card-title">Profit</h3>
                   <div class="dropdown">
-                    <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <button
+                      class="btn dropdown-toggle"
+                      type="button"
+                      data-bs-toggle="dropdown"
+                      aria-expanded="false"
+                    >
                       <img src="./assets/img/three-dots-ic.svg" alt="Icon" />
                     </button>
-                    <ul class="dropdown-menu">
+                    <ul class="dropdown-menu profile-dropdown-menu">
                       <li><a class="dropdown-item" href="#">Action 1</a></li>
                       <li>
                         <a class="dropdown-item" href="#">Another action</a>
                       </li>
                       <li>
-                        <a class="dropdown-item" href="#">Something else here</a>
+                        <a class="dropdown-item" href="#"
+                          >Something else here</a
+                        >
                       </li>
                     </ul>
                   </div>
@@ -279,7 +331,12 @@
                   </span>
                   <h3 class="card-title">Payment</h3>
                   <div class="dropdown">
-                    <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <button
+                      class="btn dropdown-toggle"
+                      type="button"
+                      data-bs-toggle="dropdown"
+                      aria-expanded="false"
+                    >
                       <img src="./assets/img/three-dots-ic.svg" alt="Icon" />
                     </button>
                     <ul class="dropdown-menu">
@@ -288,7 +345,9 @@
                         <a class="dropdown-item" href="#">Another action</a>
                       </li>
                       <li>
-                        <a class="dropdown-item" href="#">Something else here</a>
+                        <a class="dropdown-item" href="#"
+                          >Something else here</a
+                        >
                       </li>
                     </ul>
                   </div>
@@ -311,7 +370,12 @@
                   </span>
                   <h3 class="card-title">Orders</h3>
                   <div class="dropdown">
-                    <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <button
+                      class="btn dropdown-toggle"
+                      type="button"
+                      data-bs-toggle="dropdown"
+                      aria-expanded="false"
+                    >
                       <img src="./assets/img/three-dots-ic.svg" alt="Icon" />
                     </button>
                     <ul class="dropdown-menu">
@@ -320,7 +384,9 @@
                         <a class="dropdown-item" href="#">Another action</a>
                       </li>
                       <li>
-                        <a class="dropdown-item" href="#">Something else here</a>
+                        <a class="dropdown-item" href="#"
+                          >Something else here</a
+                        >
                       </li>
                     </ul>
                   </div>
@@ -343,7 +409,12 @@
                   </span>
                   <h3 class="card-title">Mails</h3>
                   <div class="dropdown">
-                    <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <button
+                      class="btn dropdown-toggle"
+                      type="button"
+                      data-bs-toggle="dropdown"
+                      aria-expanded="false"
+                    >
                       <img src="./assets/img/three-dots-ic.svg" alt="Icon" />
                     </button>
                     <ul class="dropdown-menu">
@@ -352,7 +423,9 @@
                         <a class="dropdown-item" href="#">Another action</a>
                       </li>
                       <li>
-                        <a class="dropdown-item" href="#">Something else here</a>
+                        <a class="dropdown-item" href="#"
+                          >Something else here</a
+                        >
                       </li>
                     </ul>
                   </div>
@@ -374,7 +447,12 @@
                 <div class="card-header">
                   <h4>Statistics</h4>
                   <div class="dropdown">
-                    <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <button
+                      class="btn dropdown-toggle"
+                      type="button"
+                      data-bs-toggle="dropdown"
+                      aria-expanded="false"
+                    >
                       <img src="./assets/img/three-dots-ic.svg" alt="Icon" />
                     </button>
                     <ul class="dropdown-menu">
@@ -383,7 +461,9 @@
                         <a class="dropdown-item" href="#">Another action</a>
                       </li>
                       <li>
-                        <a class="dropdown-item" href="#">Something else here</a>
+                        <a class="dropdown-item" href="#"
+                          >Something else here</a
+                        >
                       </li>
                     </ul>
                   </div>
@@ -402,7 +482,12 @@
                 <div class="card-header">
                   <h4>Chats</h4>
                   <div class="dropdown">
-                    <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <button
+                      class="btn dropdown-toggle"
+                      type="button"
+                      data-bs-toggle="dropdown"
+                      aria-expanded="false"
+                    >
                       <img src="./assets/img/three-dots-ic.svg" alt="Icon" />
                     </button>
                     <ul class="dropdown-menu">
@@ -411,7 +496,9 @@
                         <a class="dropdown-item" href="#">Another action</a>
                       </li>
                       <li>
-                        <a class="dropdown-item" href="#">Something else here</a>
+                        <a class="dropdown-item" href="#"
+                          >Something else here</a
+                        >
                       </li>
                     </ul>
                   </div>
@@ -419,7 +506,11 @@
                 <div class="card-content">
                   <div class="chat-wrapper">
                     <div class="message-block from-receiver">
-                      <img src="./assets/img/user2.png" alt="User" class="user-profile" />
+                      <img
+                        src="./assets/img/user2.png"
+                        alt="User"
+                        class="user-profile"
+                      />
                       <div class="chat-block">
                         <span class="message">
                           Lorem ipsum dolor sit amet
@@ -428,7 +519,11 @@
                       </div>
                     </div>
                     <div class="message-block from-sender">
-                      <img src="./assets/img/user3.png" alt="User" class="user-profile" />
+                      <img
+                        src="./assets/img/user3.png"
+                        alt="User"
+                        class="user-profile"
+                      />
                       <div class="chat-block">
                         <span class="message">
                           Lorem ipsum dolor sit amet
@@ -437,7 +532,11 @@
                       </div>
                     </div>
                     <div class="message-block from-receiver">
-                      <img src="./assets/img/user4.png" alt="User" class="user-profile" />
+                      <img
+                        src="./assets/img/user4.png"
+                        alt="User"
+                        class="user-profile"
+                      />
                       <div class="chat-block">
                         <span class="message">
                           Lorem ipsum dolor sit amet
@@ -446,7 +545,11 @@
                       </div>
                     </div>
                     <div class="message-block from-sender">
-                      <img src="./assets/img/user5.png" alt="User" class="user-profile" />
+                      <img
+                        src="./assets/img/user5.png"
+                        alt="User"
+                        class="user-profile"
+                      />
                       <div class="chat-block">
                         <span class="message">
                           Lorem ipsum dolor sit amet
@@ -464,7 +567,10 @@
               <div class="custom-row">
                 <div class="custom-col-6">
                   <a href="#" class="op-fade">
-                    <img src="./assets/img/innerpage-default-ic.svg" alt="Order" />
+                    <img
+                      src="./assets/img/innerpage-default-ic.svg"
+                      alt="Order"
+                    />
                     <span>Item Orders</span>
                   </a>
                 </div>
@@ -497,13 +603,26 @@
                     <h4>Daily Sales</h4>
                   </div>
                   <div class="circular-progress-outer">
-                    <svg width="249" height="250" viewBox="0 0 249 250" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <svg
+                      width="249"
+                      height="250"
+                      viewBox="0 0 249 250"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
                       <path
                         d="M238.309 125C244.378 125 249.347 129.929 248.817 135.974C246.737 159.703 237.942 182.424 223.364 201.398C206.552 223.281 182.995 238.944 156.381 245.936C129.766 252.929 101.597 250.855 76.2798 240.041C50.963 229.227 29.9277 210.282 16.4661 186.17C3.00446 162.059 -2.12397 134.143 1.88342 106.79C5.8908 79.4374 18.8078 54.1917 38.6131 35.004C58.4183 15.8162 83.9941 3.76927 111.338 0.74839C135.036 -1.8697 158.903 2.41983 180.13 12.9878C185.565 15.6937 187.182 22.5033 184.03 27.6926C180.858 32.9149 174.065 34.5029 168.542 31.8895C151.53 23.8401 132.57 20.6228 113.739 22.7032C91.2267 25.1903 70.1701 35.1086 53.8644 50.9059C37.5587 66.7033 26.924 87.4882 23.6247 110.008C20.3254 132.528 24.5477 155.511 35.6307 175.362C46.7137 195.213 64.0321 210.81 84.8755 219.714C105.719 228.617 128.911 230.324 150.823 224.567C172.734 218.811 192.129 205.915 205.971 187.899C217.577 172.793 224.73 154.803 226.738 135.968C227.382 129.933 232.241 125 238.309 125Z"
-                        fill="url(#paint0_linear_1_455)" />
+                        fill="url(#paint0_linear_1_455)"
+                      />
                       <defs>
-                        <linearGradient id="paint0_linear_1_455" x1="0.556641" y1="125" x2="249.237" y2="132.584"
-                          gradientUnits="userSpaceOnUse">
+                        <linearGradient
+                          id="paint0_linear_1_455"
+                          x1="0.556641"
+                          y1="125"
+                          x2="249.237"
+                          y2="132.584"
+                          gradientUnits="userSpaceOnUse"
+                        >
                           <stop stop-color="#1669AD" />
                           <stop offset="1" stop-color="#4484BA" />
                         </linearGradient>
@@ -515,7 +634,12 @@
                 <div class="other-sale">
                   <div class="card-header">
                     <div class="dropdown">
-                      <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      <button
+                        class="btn dropdown-toggle"
+                        type="button"
+                        data-bs-toggle="dropdown"
+                        aria-expanded="false"
+                      >
                         <img src="./assets/img/three-dots-ic.svg" alt="Icon" />
                       </button>
                       <ul class="dropdown-menu">
@@ -526,7 +650,9 @@
                           <a class="dropdown-item" href="#">Another action</a>
                         </li>
                         <li>
-                          <a class="dropdown-item" href="#">Something else here</a>
+                          <a class="dropdown-item" href="#"
+                            >Something else here</a
+                          >
                         </li>
                       </ul>
                     </div>
@@ -535,18 +661,26 @@
                     <li>
                       <a href="#">
                         <span class="img-wrap">
-                          <img src="./assets/img/li-most-sale.svg" alt="sale-icon" />
+                          <img
+                            src="./assets/img/li-most-sale.svg"
+                            alt="sale-icon"
+                          />
                         </span>
                         <span>
                           <span class="sale-title">Most Sales</span>
-                          <span class="sale-info">Author with the baste sales</span>
+                          <span class="sale-info"
+                            >Author with the baste sales</span
+                          >
                         </span>
                       </a>
                     </li>
                     <li>
                       <a href="#">
                         <span class="img-wrap">
-                          <img src="./assets/img/li-total-sale.svg" alt="sale-icon" />
+                          <img
+                            src="./assets/img/li-total-sale.svg"
+                            alt="sale-icon"
+                          />
                         </span>
                         <span>
                           <span class="sale-title">Total Sales</span>
@@ -557,22 +691,32 @@
                     <li>
                       <a href="#">
                         <span class="img-wrap">
-                          <img src="./assets/img/li-avg-sale.svg" alt="sale-icon" />
+                          <img
+                            src="./assets/img/li-avg-sale.svg"
+                            alt="sale-icon"
+                          />
                         </span>
                         <span>
                           <span class="sale-title">Avarage Sales</span>
-                          <span class="sale-info">Author with the avarage sales</span>
+                          <span class="sale-info"
+                            >Author with the avarage sales</span
+                          >
                         </span>
                       </a>
                     </li>
                     <li>
                       <a href="#">
                         <span class="img-wrap">
-                          <img src="./assets/img/li-most-sale-2.svg" alt="sale-icon" />
+                          <img
+                            src="./assets/img/li-most-sale-2.svg"
+                            alt="sale-icon"
+                          />
                         </span>
                         <span>
                           <span class="sale-title">Most Sales</span>
-                          <span class="sale-info">Author with the baste sales</span>
+                          <span class="sale-info"
+                            >Author with the baste sales</span
+                          >
                         </span>
                       </a>
                     </li>
@@ -587,7 +731,12 @@
                 <div class="card-header">
                   <h4>Users</h4>
                   <div class="dropdown with-text">
-                    <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <button
+                      class="btn dropdown-toggle"
+                      type="button"
+                      data-bs-toggle="dropdown"
+                      aria-expanded="false"
+                    >
                       Filter
                       <img src="./assets/img/ic-dropdown.svg" alt="Icon" />
                     </button>
@@ -597,7 +746,9 @@
                         <a class="dropdown-item" href="#">Another action</a>
                       </li>
                       <li>
-                        <a class="dropdown-item" href="#">Something else here</a>
+                        <a class="dropdown-item" href="#"
+                          >Something else here</a
+                        >
                       </li>
                     </ul>
                   </div>
@@ -632,7 +783,10 @@
                               <img src="./assets/img/ic-edit.svg" alt="Edit" />
                             </a>
                             <a href="#" title="Delete">
-                              <img src="./assets/img/ic-delete.svg" alt="Delete" />
+                              <img
+                                src="./assets/img/ic-delete.svg"
+                                alt="Delete"
+                              />
                             </a>
                           </div>
                         </td>
@@ -654,7 +808,10 @@
                               <img src="./assets/img/ic-edit.svg" alt="Edit" />
                             </a>
                             <a href="#" title="Delete">
-                              <img src="./assets/img/ic-delete.svg" alt="Delete" />
+                              <img
+                                src="./assets/img/ic-delete.svg"
+                                alt="Delete"
+                              />
                             </a>
                           </div>
                         </td>
@@ -676,7 +833,10 @@
                               <img src="./assets/img/ic-edit.svg" alt="Edit" />
                             </a>
                             <a href="#" title="Delete">
-                              <img src="./assets/img/ic-delete.svg" alt="Delete" />
+                              <img
+                                src="./assets/img/ic-delete.svg"
+                                alt="Delete"
+                              />
                             </a>
                           </div>
                         </td>
@@ -698,7 +858,10 @@
                               <img src="./assets/img/ic-edit.svg" alt="Edit" />
                             </a>
                             <a href="#" title="Delete">
-                              <img src="./assets/img/ic-delete.svg" alt="Delete" />
+                              <img
+                                src="./assets/img/ic-delete.svg"
+                                alt="Delete"
+                              />
                             </a>
                           </div>
                         </td>
@@ -720,7 +883,10 @@
                               <img src="./assets/img/ic-edit.svg" alt="Edit" />
                             </a>
                             <a href="#" title="Delete">
-                              <img src="./assets/img/ic-delete.svg" alt="Delete" />
+                              <img
+                                src="./assets/img/ic-delete.svg"
+                                alt="Delete"
+                              />
                             </a>
                           </div>
                         </td>
@@ -732,14 +898,12 @@
             </div>
             <!-- Table End -->
           </div>
-        </div>
-      </section>
-      <!-- End Main Content -->
-    </main>
-  </div>
+        </section>
+        <!-- End Main Content -->
+      </main>
+    </div>
 
-  <!-- JavaScripts -->
-  <script src="assets/js/script.js"></script>
-</body>
-
+    <!-- JavaScripts -->
+    <script src="assets/js/script.js"></script>
+  </body>
 </html>
