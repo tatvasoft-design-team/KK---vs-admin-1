@@ -48,6 +48,46 @@ a:hover {
 .dropdown-toggle {
   box-shadow: none !important;
 }
+
+/* Dropdown Menu
+-------------------------------------------------------------------------------------------------------*/
+.dropdown {
+  .dropdown-menu {
+    border-radius: 8px;
+    box-shadow: 0px 4px 20px rgba(43, 117, 179, 0.25);
+    border: none;
+    .dropdown-item {
+      color: $text-dark;
+      padding: 8px 16px;
+    }
+  }
+}
+.primary-dropdown-menu {
+  li {
+    position: relative;
+    &:after {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 0;
+      height: 100%;
+      background-color: #f4f7fa;
+      transition: all 0.3s ease-in-out;
+    }
+    &:hover {
+      &:after {
+        width: 100%;
+      }
+    }
+    .dropdown-item {
+      position: relative;
+      z-index: 1;
+      background-color: transparent !important;
+    }
+  }
+}
+
 /* Form floating
 --------------------------------------------------------------------------------------------------------*/
 .form-floating > .form-control,
@@ -149,4 +189,7 @@ a:hover {
   border-radius: 10px;
 }
 
-.main{max-width: calc(100% - var(--sidebar-width)); margin-left: var(--sidebar-width);}
+.main {
+  max-width: calc(100% - var(--sidebar-width));
+  margin-left: var(--sidebar-width);
+}

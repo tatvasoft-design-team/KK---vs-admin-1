@@ -141,7 +141,9 @@ Project Name : vs-theme-1;
 
 /* Dashboard
 --------------------------------------------------------------------------------------------------------*/
-.main-content{padding: 10px 38px;}
+.main-content {
+  padding: 10px 38px;
+}
 .primary-row {
   --bs-gutter-x: 30px;
   --bs-gutter-y: 30px;
@@ -290,7 +292,7 @@ Project Name : vs-theme-1;
     transition: all 300ms ease;
     &:hover,
     &:focus {
-      background-color: rgba($primary, 0.2);
+      background-color: rgba($color: $primary, $alpha: 0.1);
     }
   }
 }
