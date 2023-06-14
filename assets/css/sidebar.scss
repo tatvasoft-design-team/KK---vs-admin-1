@@ -26,6 +26,27 @@
         align-items: center;
         border-radius: 12px;
         padding: 17px 14px;
+        transition: all 0.3s;
+        position: relative;
+        overflow: hidden;
+        &::after {
+          content: "";
+          position: absolute;
+          left: 50%;
+          transform: skewX(-30deg);
+          height: 100%;
+          width: 0;
+          background-color: rgba($color: $white, $alpha: 0.7);
+        }
+        &::before {
+          content: "";
+          position: absolute;
+          right: 50%;
+          transform: skewX(-30deg);
+          height: 100%;
+          width: 0;
+          background-color: rgba($color: $white, $alpha: 0.7);
+        }
         &.active {
           background-color: $white;
           color: $primary;
@@ -40,10 +61,46 @@
             }
           }
         }
+        &:not(.active):hover {
+          background-color: $primary-variant-1;
+          &::after {
+            animation: hoverAfterAnimate 0.3s ease-out;
+            animation-delay: 0.1s;
+          }
+          &::before {
+            animation: hoverBeforeAnimate 0.3s ease-out;
+            animation-delay: 0.1s;
+          }
+        }
+        &:not(.active):focus {
+          background-color: $primary-variant-1;
+        }
+      }
+      @keyframes hoverAfterAnimate {
+        0% {
+          left: 50%;
+          width: 1px;
+        }
+        100% {
+          left: -10px;
+          width: 1px;
+        }
+      }
+      @keyframes hoverBeforeAnimate {
+        0% {
+          right: 50%;
+          width: 1px;
+        }
+        100% {
+          right: -10px;
+          width: 1px;
+        }
       }
       img {
         display: block;
         transition: all 0.3s;
+        z-index: 1;
+        position: relative;
         &:nth-child(2) {
           margin-left: -26px;
           opacity: 0;
@@ -52,6 +109,8 @@
       }
       span {
         margin-left: 20px;
+        z-index: 1;
+        position: relative;
       }
     }
   }
