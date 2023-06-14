@@ -30,7 +30,7 @@ var myChart = new Chart(ctx, {
         },
         animation: {
             duration: 2500,
-            easing: "easeInOutBounce",
+            easing: "easeOutSine",
         },
     },
 });
