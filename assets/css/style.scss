@@ -12,6 +12,14 @@ Project Name : vs-theme-1;
     visibility: visible;
   }
 }
+h6 {
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: 600;
+  color: $text-dark;
+  letter-spacing: 0.04em;
+  margin-bottom: 20px;
+}
 
 /* Login Page
 --------------------------------------------------------------------------------------------------------*/
@@ -384,7 +392,7 @@ Project Name : vs-theme-1;
         font-size: 18px;
         line-height: 27px;
         letter-spacing: 0.04em;
-        color: $text-white;
+        color: $white;
         padding-top: 10px;
       }
     }
@@ -493,10 +501,15 @@ Project Name : vs-theme-1;
     }
   }
 }
-
+.table-card {
+  .card-header {
+    margin-bottom: 10px;
+  }
+}
 .table {
   th {
     border-bottom: 1px solid #cac8c8;
+    padding: 17px 8px;
   }
   .user-id {
     display: flex;
@@ -512,11 +525,17 @@ Project Name : vs-theme-1;
   }
   tr {
     vertical-align: middle;
+    &:first-child {
+      td {
+        padding-top: 20px;
+      }
+    }
     td {
       color: $text-dark;
       letter-spacing: 0.04em;
       border-bottom: 0;
       white-space: nowrap;
+      padding: 10px 8px;
     }
   }
   .table-action {
@@ -537,7 +556,23 @@ Project Name : vs-theme-1;
     }
   }
 }
-
+/* Innerpage
+--------------------------------------------------------------------------------------------------------*/
+.innerpage .primary-card .card-header {
+  margin-bottom: 20px;
+}
+.innerpage .primary-heading {
+  font-weight: 600;
+  font-size: 22px;
+  line-height: 33px;
+  letter-spacing: 0.04em;
+  color: #115186;
+  margin-bottom: 20px;
+}
+.other-element {
+  padding-top: 20px;
+  margin-bottom: 30px;
+}
 /* Responsive Media Query
 --------------------------------------------------------------------------------------------------------*/
 @media (max-width: 1366px) {

@@ -1,10 +1,9 @@
 /* Import All css here */
-@import 'https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap';
+@import "https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap";
 @import "var.scss";
 @import "../../node_modules/bootstrap/scss/bootstrap";
 @import "../../node_modules/aos/src/sass/aos.scss";
 @import "common";
 @import "header";
-@import "footer";
 @import "sidebar";
 @import "style.scss";

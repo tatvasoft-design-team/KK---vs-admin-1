@@ -15,12 +15,15 @@ $primary-gradient: linear-gradient(91.76deg, #1669ad 1.49%, #4484ba 98.58%);
 $primary-variant-1: #1d79c3;
 $primary-variant-2: #114978;
 $text-dark: #444444;
-$text-light: #000000;
-$text-white: #ffffff;
+$text-grey: #aaaaaa;
+$grey-variant-1: #c4c4c4;
+$grey-variant-2: #999;
+$grey-variant-3: #c4c2c2;
+$light-variant-1: #f4f7fa;
 $danger: #f13838;
 
-:root{
-  --sidebar-width: 260px
+:root {
+  --sidebar-width: 260px;
 }
 
 $grid-breakpoints: (
