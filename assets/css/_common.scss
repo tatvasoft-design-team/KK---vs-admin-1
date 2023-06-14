@@ -96,3 +96,8 @@ a:hover {
 /* Button
 --------------------------------------------------------------------------------------------------------*/
 .btn-primary{font-weight: 600;font-size: 18px;line-height: 26px;color: $text-white; padding: 12px;border-radius: 10px;}
+
+
+/* Dropdown
+--------------------------------------------------------------------------------------------------------*/
+.dropdown-toggle::after{display: none;}
