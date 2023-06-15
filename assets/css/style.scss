@@ -164,7 +164,7 @@ h6 {
 /* Dashboard
 --------------------------------------------------------------------------------------------------------*/
 .main-content {
-  padding: 10px 50px;
+  padding: 10px 50px 50px;
 }
 .primary-row {
   --bs-gutter-x: 30px;
@@ -246,9 +246,14 @@ h6 {
       bottom: -50px;
     }
   }
-  &:hover{
-    .elips span{width: 130px;height: 130px;}
-    .card-content h2.number{transform: scale(0.9);}
+  &:hover {
+    .elips span {
+      width: 130px;
+      height: 130px;
+    }
+    .card-content h2.number {
+      transform: scale(0.9);
+    }
   }
   .card-content h2.number {
     font-weight: 600;
@@ -259,8 +264,11 @@ h6 {
     margin-bottom: 5px;
     transition: all 300ms ease;
     transform-origin: left;
-    display: flex;align-items: center;
-    span{display: block;}
+    display: flex;
+    align-items: center;
+    span {
+      display: block;
+    }
   }
 }
 .header-with-icon {
@@ -630,14 +638,22 @@ h6 {
   color: #115186;
   margin-bottom: 20px;
 }
-.other-element {
+.innerpage .other-element {
   padding-top: 20px;
+  margin-bottom: 30px;
+}
+.innerpage .pb-10 {
+  padding-bottom: 10px;
+}
+.innerpage .tab-heading {
   margin-bottom: 30px;
 }
 /* Responsive Media Query
 --------------------------------------------------------------------------------------------------------*/
 @media (max-width: 1366px) {
-  .main-content{padding: 10px 30px;}
+  .main-content {
+    padding: 10px 30px;
+  }
 }
 @media (max-width: 1199px) {
   .custom-row {
