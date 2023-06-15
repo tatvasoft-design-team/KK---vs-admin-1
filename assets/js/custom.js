@@ -43,4 +43,18 @@ window.addEventListener("resize", function () {
 // On Load Page Visible
 window.addEventListener("load", function () {
   document.body.classList.add("page-loaded");
+
+
+  var path = document.querySelector(".path");
+  var length = path.getTotalLength();
+  console.log(length);
+
+  const navToggler = document.getElementById("nav-toggler");
+
+  const toggleNav = () => {
+    document.body.classList.toggle("show-nav");
+  }
+  navToggler.addEventListener("click", toggleNav);
+
+
 });
