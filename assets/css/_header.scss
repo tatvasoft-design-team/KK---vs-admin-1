@@ -1,5 +1,7 @@
-/* Header --------------------------------------------
---------------------------------------------------- */
+/* Header ----------------------------------------------------------------------------------------------- */
+.page-scrolled .header {
+  box-shadow: 0px 0 16px 0 rgba(38, 114, 178, 0.2);
+}
 .header {
   display: flex;
   align-items: center;
@@ -7,7 +9,7 @@
   background-color: $white;
   position: sticky;
   top: 0;
-  z-index: 3;
+  z-index: 4;
   .form-wrapper {
     position: relative;
     max-width: 363px;
@@ -277,6 +279,7 @@
     justify-content: center;
     margin-right: 12px;
     flex-shrink: 0;
+    min-width: auto;
     > img {
       width: 24px;
       height: 24px;

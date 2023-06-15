@@ -9,11 +9,10 @@ function disableDefaultAction(e) {
 
 // On scroll Add Class
 window.addEventListener("scroll", function () {
-  if (window.pageYOffset > 200) {
-    document.body.classList.add('page-scrolled');
-  }
-  else {
-    document.body.classList.remove('page-scrolled');
+  if (window.pageYOffset > 20) {
+    document.body.classList.add("page-scrolled");
+  } else {
+    document.body.classList.remove("page-scrolled");
   }
 });
 
@@ -22,7 +21,7 @@ function footerAdj() {
   var footerH = document.querySelector(".footer").offsetHeight;
   document.querySelector(".footer").style.marginTop = "-" + footerH + "px";
   document.querySelector(".wrapper").style.paddingBottom = footerH + "px";
-};
+}
 // footerAdj();
 window.addEventListener("resize", function () {
   // footerAdj();
@@ -50,18 +49,16 @@ window.addEventListener("load", function () {
 
   const toggleNav = () => {
     document.body.classList.toggle("show-nav");
-  }
+  };
   navToggler.addEventListener("click", toggleNav);
 
   const toggleOverlay = () => {
     document.body.classList.remove("show-nav", "show-searchbar");
-  }
+  };
   overlay.addEventListener("click", toggleOverlay);
 
   const toggleSearchbar = () => {
     document.body.classList.toggle("show-searchbar");
-  }
+  };
   searchToggler.addEventListener("click", toggleSearchbar);
-
-
 });
