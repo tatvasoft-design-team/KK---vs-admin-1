@@ -49,4 +49,12 @@ window.addEventListener("load", function () {
   var length = path.getTotalLength();
   console.log(length);
 
+  const navToggler = document.getElementById("nav-toggler");
+
+  const toggleNav = () => {
+    document.body.classList.toggle("show-nav");
+  }
+  navToggler.addEventListener("click", toggleNav);
+
+
 });
