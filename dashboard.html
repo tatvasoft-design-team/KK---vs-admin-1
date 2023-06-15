@@ -71,6 +71,7 @@
       <main class="main">
         <!-- Start Header -->
         <nav class="header">
+          <div class="overlay-search" id="overlay-search"></div>
           <button
             class="btn btn-primary nav-toggler d-lg-none"
             type="button"
@@ -78,6 +79,11 @@
           >
             <img src="./assets/img/menu-white-ic.svg" alt="Menu" />
           </button>
+          <div class="logo-block d-lg-none">
+            <a href="#" class="logo" title="Logo"
+              ><img src="./assets/img/mobile-logo.svg" alt="Logo"
+            /></a>
+          </div>
           <form class="form-wrapper" role="search">
             <input
               class="form-control"
@@ -89,7 +95,7 @@
               <img src="assets/img/search-ic.svg" alt="Search" />
             </button>
           </form>
-          <ul class="navbar-nav ms-auto">
+          <ul class="navbar-nav ms-auto ms-md-0 ms-lg-auto">
             <li class="nav-item dropdown icon-dropdown d-md-none">
               <a
                 class="nav-link icon-btn dropdown-toggle"

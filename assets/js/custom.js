@@ -46,6 +46,7 @@ window.addEventListener("load", function () {
   const navToggler = document.getElementById("nav-toggler");
   const searchToggler = document.getElementById("search-toggler");
   const overlay = document.getElementById("overlay");
+  const overlaySearch = document.getElementById("overlay-search");
 
   const toggleNav = () => {
     document.body.classList.toggle("show-nav");
@@ -56,6 +57,7 @@ window.addEventListener("load", function () {
     document.body.classList.remove("show-nav", "show-searchbar");
   };
   overlay.addEventListener("click", toggleOverlay);
+  overlaySearch.addEventListener("click", toggleOverlay);
 
   const toggleSearchbar = () => {
     document.body.classList.toggle("show-searchbar");
