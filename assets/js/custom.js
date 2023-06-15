@@ -43,4 +43,10 @@ window.addEventListener("resize", function () {
 // On Load Page Visible
 window.addEventListener("load", function () {
   document.body.classList.add("page-loaded");
+
+
+  var path = document.querySelector(".path");
+  var length = path.getTotalLength();
+  console.log(length);
+
 });
