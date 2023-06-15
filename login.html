@@ -20,7 +20,7 @@
       <div class="container login-container">
         <div class="row login-row">
           <div class="col-md-6 col-12 mockup-col">
-            <div class="login-mockup">
+            <div class="login-mockup" data-aos="fade-right">
               <object
                 type="image/svg+xml"
                 data="./assets/img/mockup-animated.svg"
@@ -31,7 +31,7 @@
             </div>
           </div>
           <div class="col-md-6 col-12 content-col">
-            <div class="login-content">
+            <div class="login-content" data-aos="fade-left">
               <div class="card">
                 <a href="#" class="logo-block" title="Logo">
                   <img src="./assets/img/logo-primary.svg" alt="Company" />
@@ -92,5 +92,12 @@
 
     <!-- JavaScripts -->
     <script src="assets/js/script.js"></script>
+    <script>
+      AOS.init({
+        once: true,
+        easing: "ease-out-sine",
+        duration: 800,
+      });
+    </script>
   </body>
 </html>

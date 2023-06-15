@@ -25,6 +25,7 @@ h6 {
 --------------------------------------------------------------------------------------------------------*/
 .login-row {
   min-height: calc(100vh - 32px);
+  overflow: hidden;
 }
 .login-container {
   background: $primary-gradient;
@@ -723,4 +724,5 @@ h6 {
 }
 
 @media (max-width: 575px) {
+  .table-outer nav ul{margin: 12px auto 0;}
 }
