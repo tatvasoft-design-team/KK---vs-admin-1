@@ -282,4 +282,13 @@
       }
     }
   }
+
+  .nav-toggler{width: 44px;height: 44px;padding: 4px;display: flex; align-items: center; justify-content: center;margin-right: 12px;
+    >img{width: 24px;height: 24px;display: block;}
+  }
+}
+
+
+@media (max-width: 991px) {
+  .header{padding: 24px 30px;}
 }

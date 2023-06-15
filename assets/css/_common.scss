@@ -309,3 +309,7 @@ a:hover {
     color: $text-grey;
   }
 }
+
+
+.overlay-search {position: fixed;top: 0;left: 0;bottom: 0;width: 100%;visibility: hidden;opacity: 0;z-index: 3;transition: all 150ms linear;background-color: rgba(0, 0, 0, 0.5);}
+.show-nav .overlay-search {transform: translatex(0%);opacity: 1;display: block;visibility: visible;z-index: 10;top: 65px;}
