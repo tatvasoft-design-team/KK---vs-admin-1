@@ -1,10 +1,10 @@
 // Variable overrides first
 $theme-colors: (
   "primary": #1a6baf,
-  "secondary": #6c757d,
-  "success": #198754,
-  "danger": #f13838,
-  "warning": #ffc107,
+  "secondary": #e7e5e5,
+  "success": #157015,
+  "danger": #880f0a,
+  "warning": #e18202,
   "info": #0dcaf0,
   "light": #f8f9fa,
   "dark": #212529,
@@ -21,6 +21,9 @@ $grey-variant-2: #999;
 $grey-variant-3: #c4c2c2;
 $light-variant-1: #f4f7fa;
 $danger: #f13838;
+$alert-success: #44e544;
+$alert-danger: #d93933;
+$alert-warning: #fb9f25;
 
 :root {
   --sidebar-width: 260px;

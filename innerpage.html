@@ -420,9 +420,7 @@
           </div>
           <div class="col-12">
             <div class="card primary-card">
-              <div class="card-header">
-                <h4>Form Elements</h4>
-              </div>
+              <h4 class="primary-heading">Form Elements</h4>
               <div class="form-floating">
                 <input type="text" class="form-control" id="name" placeholder="Name" />
                 <label for="name">Name</label>
@@ -632,6 +630,69 @@
               <div class="btn-grp">
                 <button type="button" class="btn btn-primary">Primary</button>
                 <button type="button" class="btn btn-secondary">Secondary</button>
+              </div>
+              <h6>Alerts</h6>
+              <div class="alert alert-success d-flex align-items-center" role="alert">
+                <img src="assets/img/success-alert-ic.svg" alt="Success">
+                <p class="text-success">
+                  This is a success message.
+                </p>
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close">
+                </button>
+              </div>
+              <div class="alert alert-danger d-flex align-items-center" role="alert">
+                <img src="assets/img/error-alert-ic.svg" alt="Error">
+                <p class="text-danger">
+                  This is an error message.
+                </p>
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close">
+                </button>
+              </div>
+              <div class="alert alert-warning d-flex align-items-center" role="Warning">
+                <img src="assets/img/warning-alert-ic.svg" alt="Success">
+                <p class="text-warning">
+                  This is a warning message.
+                </p>
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close">
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="col-12">
+            <div class="card primary-card">
+              <h4 class="primary-heading tab-heading">Tabs</h4>
+              <nav>
+                <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                  <button class="nav-link active" id="option-1-tab" data-bs-toggle="tab" data-bs-target="#option-1"
+                    type="button" role="tab" aria-controls="option-1" aria-selected="true">Option 1</button>
+                  <button class="nav-link" id="option-2-tab" data-bs-toggle="tab" data-bs-target="#option-2"
+                    type="button" role="tab" aria-controls="option-2" aria-selected="false">Option 2</button>
+                  <button class="nav-link" id="option-3-tab" data-bs-toggle="tab" data-bs-target="#option-3"
+                    type="button" role="tab" aria-controls="option-3" aria-selected="false">Option 3</button>
+                </div>
+              </nav>
+              <div class="tab-content" id="nav-tabContent">
+                <div class="tab-pane fade show active" id="option-1" role="tabpanel" aria-labelledby="option-1-tab"
+                  tabindex="0">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vel, massa dolor dignissim dolor. Ut mus vel
+                  sed mattis ullamcorper tortor id tellus nec. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  Vel, massa dolor dignissim dolor. Ut mus vel sed mattis ullamcorper tortor id tellus nec.Lorem ipsum
+                  dolor sit amet, consectetur adipiscing elit. Vel, massa dolor dignissim dolor. Ut mus vel sed mattis
+                  ullamcorper tortor id tellus nec.
+                </div>
+                <div class="tab-pane fade" id="option-2" role="tabpanel" aria-labelledby="option-2-tab" tabindex="0">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vel, massa dolor dignissim dolor. Ut mus vel
+                  sed mattis ullamcorper tortor id tellus nec. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  Vel, massa dolor dignissim dolor. Ut mus vel sed mattis ullamcorper tortor id tellus nec.Lorem ipsum
+                  dolor sit amet, consectetur adipiscing elit. Vel, massa dolor dignissim dolor. Ut mus vel sed mattis
+                  ullamcorper tortor id tellus nec.Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  Vel, massa dolor dignissim dolor.
+                </div>
+                <div class="tab-pane fade" id="option-3" role="tabpanel" aria-labelledby="option-3-tab" tabindex="0">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vel, massa dolor dignissim dolor. Ut mus vel
+                  sed mattis ullamcorper tortor id tellus nec. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  Vel, massa dolor dignissim dolor.
+                </div>
               </div>
             </div>
           </div>
