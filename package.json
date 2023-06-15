@@ -10,6 +10,7 @@
     "bootstrap": "^5.2.3",
     "browser-sync": "^2.29.3",
     "chart.js": "^4.3.0",
+    "gsap": "^3.12.1",
     "sass": "^1.59.2"
   },
   "devDependencies": {

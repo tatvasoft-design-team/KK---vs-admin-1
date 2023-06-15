@@ -44,17 +44,24 @@ window.addEventListener("resize", function () {
 window.addEventListener("load", function () {
   document.body.classList.add("page-loaded");
 
-
-  var path = document.querySelector(".path");
-  var length = path.getTotalLength();
-  console.log(length);
-
   const navToggler = document.getElementById("nav-toggler");
+  const searchToggler = document.getElementById("search-toggler");
+  const overlay = document.getElementById("overlay");
 
   const toggleNav = () => {
     document.body.classList.toggle("show-nav");
   }
   navToggler.addEventListener("click", toggleNav);
+
+  const toggleOverlay = () => {
+    document.body.classList.remove("show-nav", "show-searchbar");
+  }
+  overlay.addEventListener("click", toggleOverlay);
+
+  const toggleSearchbar = () => {
+    document.body.classList.toggle("show-searchbar");
+  }
+  searchToggler.addEventListener("click", toggleSearchbar);
 
 
 });
