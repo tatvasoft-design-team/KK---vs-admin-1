@@ -162,28 +162,71 @@ a:hover {
 .innerpage .form-floating {
   margin-bottom: 20px;
 }
-.password-btn{position: absolute; top: 9px;right: 8px; border-radius: 50%; width: 34px; height: 34px; border: 0 !important;
-  >img{position: absolute;left: 50%;top: 50%; transform: translate(-50%,-50%);}
-  &:hover,&:focus{background-color: rgba($color: $primary, $alpha: 0.2);}
+.password-btn {
+  position: absolute;
+  top: 9px;
+  right: 8px;
+  border-radius: 50%;
+  width: 34px;
+  height: 34px;
+  border: 0 !important;
+  > img {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+  &:hover,
+  &:focus {
+    background-color: rgba($color: $primary, $alpha: 0.2);
+  }
 }
-/* Form Check
+/* Form Check & Radio
 --------------------------------------------------------------------------------------------------------*/
+.checkbox-grp,
+.radio-grp {
+  display: flex;
+  align-items: center;
+}
 .form-check .form-check-input {
   width: 20px;
   height: 20px;
-  margin-left: -28px;
+  margin-top: 0;
+  margin-left: 0;
   cursor: pointer;
+  margin-right: 8px;
+  border-color: $grey-variant-1;
+  &[type="checkbox"] {
+    border-radius: 2px;
+    background-size: 12px;
+  }
+  &[type="radio"] {
+    background-size: 10px;
+  }
+  &:checked {
+    border-color: $primary;
+    &[type="checkbox"] {
+      --bs-form-check-bg-image: url("../img/checkbox-checked-ic.svg");
+    }
+    &[type="radio"] {
+      --bs-form-check-bg-image: url("../img/radio-checked-ic.svg");
+    }
+  }
 }
 .form-check {
-  padding-left: 30px;
+  padding-left: 0;
   margin-bottom: 0;
+  display: inline-flex;
+  align-items: center;
+  min-height: auto;
+  margin-right: 30px;
 }
 .form-check-label {
-  margin-top: 4px;
+  margin-top: 0;
+  color: $text-dark;
+  font-size: 14px;
+  letter-spacing: 0.04em;
   cursor: pointer;
-}
-.form-check-input[type="checkbox"] {
-  border-radius: 2px;
 }
 
 .primary-link {
