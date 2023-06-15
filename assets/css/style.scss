@@ -229,6 +229,7 @@ h6 {
       );
       display: block;
       border-radius: 50%;
+      transition: all 300ms ease;
     }
     .one {
       right: -50px;
@@ -238,6 +239,10 @@ h6 {
       bottom: -50px;
     }
   }
+  &:hover{
+    .elips span{width: 130px;height: 130px;}
+    .card-content h2.number{transform: scale(0.9);}
+  }
   .card-content h2.number {
     font-weight: 600;
     font-size: 32px;
@@ -245,6 +250,10 @@ h6 {
     color: $text-dark;
     letter-spacing: 0.02em;
     margin-bottom: 5px;
+    transition: all 300ms ease;
+    transform-origin: left;
+    display: flex;align-items: center;
+    span{display: block;}
   }
 }
 .header-with-icon {
@@ -621,6 +630,7 @@ h6 {
 /* Responsive Media Query
 --------------------------------------------------------------------------------------------------------*/
 @media (max-width: 1366px) {
+  .main-content{padding: 10px 30px;}
 }
 @media (max-width: 1199px) {
   .custom-row {
