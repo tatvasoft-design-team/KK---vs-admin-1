@@ -69,6 +69,9 @@
     <main class="main">
       <!-- Start Header -->
       <nav class="sticky-top header">
+        <button class="btn btn-primary nav-toggler d-lg-none" type="button" id="nav-toggler">
+          <img src="./assets/img/menu-white-ic.svg" alt="Menu" />
+        </button>
         <form class="form-wrapper" role="search">
           <input class="form-control" type="search" placeholder="Search" aria-label="Search" />
           <button class="btn btn-primary" type="submit">
@@ -256,136 +259,138 @@
                   </ul>
                 </div>
               </div>
-              <div class="table-responsive">
-                <table class="table">
-                  <thead>
-                    <tr>
-                      <th scope="col">Record Id</th>
-                      <th scope="col">Name</th>
-                      <th scope="col">DOB</th>
-                      <th scope="col">Mobile No.</th>
-                      <th scope="col">Email</th>
-                      <th scope="col">Actions</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td>
-                        <div class="user-id">
-                          <img src="./assets/img/user2.png" alt="User" />
-                          <span>ET0001</span>
-                        </div>
-                      </td>
-                      <td>Darlene</td>
-                      <td>5/19/12</td>
-                      <td>(270) 555-0117</td>
-                      <td>tim@example.com</td>
-                      <td>
-                        <div class="table-action">
-                          <a href="#" title="Edit">
-                            <img src="./assets/img/ic-edit.svg" alt="Edit" />
-                          </a>
-                          <a href="#" title="Delete">
-                            <img src="./assets/img/ic-delete.svg" alt="Delete" />
-                          </a>
-                        </div>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <div class="user-id">
-                          <img src="./assets/img/user3.png" alt="User" />
-                          <span>ET0002</span>
-                        </div>
-                      </td>
-                      <td>Theresa</td>
-                      <td>2/11/12</td>
-                      <td>(629) 555-0129</td>
-                      <td>jessica@example.com</td>
-                      <td>
-                        <div class="table-action">
-                          <a href="#" title="Edit">
-                            <img src="./assets/img/ic-edit.svg" alt="Edit" />
-                          </a>
-                          <a href="#" title="Delete">
-                            <img src="./assets/img/ic-delete.svg" alt="Delete" />
-                          </a>
-                        </div>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <div class="user-id">
-                          <img src="./assets/img/user4.png" alt="User" />
-                          <span>ET0003</span>
-                        </div>
-                      </td>
-                      <td>Marvin</td>
-                      <td>7/18/17</td>
-                      <td>(684) 555-0102</td>
-                      <td>sara@example.com</td>
-                      <td>
-                        <div class="table-action">
-                          <a href="#" title="Edit">
-                            <img src="./assets/img/ic-edit.svg" alt="Edit" />
-                          </a>
-                          <a href="#" title="Delete">
-                            <img src="./assets/img/ic-delete.svg" alt="Delete" />
-                          </a>
-                        </div>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <div class="user-id">
-                          <img src="./assets/img/user5.png" alt="User" />
-                          <span>ET0004</span>
-                        </div>
-                      </td>
-                      <td>Bessie</td>
-                      <td>12/4/17</td>
-                      <td>(208) 555-0112</td>
-                      <td>willie@example.com</td>
-                      <td>
-                        <div class="table-action">
-                          <a href="#" title="Edit">
-                            <img src="./assets/img/ic-edit.svg" alt="Edit" />
-                          </a>
-                          <a href="#" title="Delete">
-                            <img src="./assets/img/ic-delete.svg" alt="Delete" />
-                          </a>
-                        </div>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <div class="user-id">
-                          <img src="./assets/img/user6.png" alt="User" />
-                          <span>ET0005</span>
-                        </div>
-                      </td>
-                      <td>Cody</td>
-                      <td>6/21/19</td>
-                      <td>(907) 555-0101</td>
-                      <td>michelle@example.com</td>
-                      <td>
-                        <div class="table-action">
-                          <a href="#" title="Edit">
-                            <img src="./assets/img/ic-edit.svg" alt="Edit" />
-                          </a>
-                          <a href="#" title="Delete">
-                            <img src="./assets/img/ic-delete.svg" alt="Delete" />
-                          </a>
-                        </div>
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
+              <div class="table-outer">
+                <div class="table-responsive">
+                  <table class="table">
+                    <thead>
+                      <tr>
+                        <th scope="col">Record Id</th>
+                        <th scope="col">Name</th>
+                        <th scope="col">DOB</th>
+                        <th scope="col">Mobile No.</th>
+                        <th scope="col">Email</th>
+                        <th scope="col" class="text-end">Actions</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>
+                          <div class="user-id">
+                            <img src="./assets/img/user2.png" alt="User" />
+                            <span>ET0001</span>
+                          </div>
+                        </td>
+                        <td>Darlene</td>
+                        <td>5/19/12</td>
+                        <td>(270) 555-0117</td>
+                        <td>tim@example.com</td>
+                        <td>
+                          <div class="table-action">
+                            <a href="#" title="Edit">
+                              <img src="./assets/img/ic-edit.svg" alt="Edit" />
+                            </a>
+                            <a href="#" title="Delete">
+                              <img src="./assets/img/ic-delete.svg" alt="Delete" />
+                            </a>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <div class="user-id">
+                            <img src="./assets/img/user3.png" alt="User" />
+                            <span>ET0002</span>
+                          </div>
+                        </td>
+                        <td>Theresa</td>
+                        <td>2/11/12</td>
+                        <td>(629) 555-0129</td>
+                        <td>jessica@example.com</td>
+                        <td>
+                          <div class="table-action">
+                            <a href="#" title="Edit">
+                              <img src="./assets/img/ic-edit.svg" alt="Edit" />
+                            </a>
+                            <a href="#" title="Delete">
+                              <img src="./assets/img/ic-delete.svg" alt="Delete" />
+                            </a>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <div class="user-id">
+                            <img src="./assets/img/user4.png" alt="User" />
+                            <span>ET0003</span>
+                          </div>
+                        </td>
+                        <td>Marvin</td>
+                        <td>7/18/17</td>
+                        <td>(684) 555-0102</td>
+                        <td>sara@example.com</td>
+                        <td>
+                          <div class="table-action">
+                            <a href="#" title="Edit">
+                              <img src="./assets/img/ic-edit.svg" alt="Edit" />
+                            </a>
+                            <a href="#" title="Delete">
+                              <img src="./assets/img/ic-delete.svg" alt="Delete" />
+                            </a>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <div class="user-id">
+                            <img src="./assets/img/user5.png" alt="User" />
+                            <span>ET0004</span>
+                          </div>
+                        </td>
+                        <td>Bessie</td>
+                        <td>12/4/17</td>
+                        <td>(208) 555-0112</td>
+                        <td>willie@example.com</td>
+                        <td>
+                          <div class="table-action">
+                            <a href="#" title="Edit">
+                              <img src="./assets/img/ic-edit.svg" alt="Edit" />
+                            </a>
+                            <a href="#" title="Delete">
+                              <img src="./assets/img/ic-delete.svg" alt="Delete" />
+                            </a>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <div class="user-id">
+                            <img src="./assets/img/user6.png" alt="User" />
+                            <span>ET0005</span>
+                          </div>
+                        </td>
+                        <td>Cody</td>
+                        <td>6/21/19</td>
+                        <td>(907) 555-0101</td>
+                        <td>michelle@example.com</td>
+                        <td>
+                          <div class="table-action">
+                            <a href="#" title="Edit">
+                              <img src="./assets/img/ic-edit.svg" alt="Edit" />
+                            </a>
+                            <a href="#" title="Delete">
+                              <img src="./assets/img/ic-delete.svg" alt="Delete" />
+                            </a>
+                          </div>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
                 <nav>
                   <ul class="pagination">
                     <li class="page-item">
                       <a class="page-link" href="#" aria-label="Previous">
-                        <span aria-hidden="true">&laquo;</span>
+                        <span aria-hidden="true"><img src="./assets/img/ic-pagination-prev.svg" alt="Icon" /></span>
                       </a>
                     </li>
                     <li class="page-item">
@@ -405,7 +410,7 @@
                     </li>
                     <li class="page-item">
                       <a class="page-link" href="#" aria-label="Next">
-                        <span aria-hidden="true">&raquo;</span>
+                        <span aria-hidden="true"><img src="./assets/img/ic-pagination-next.svg" alt="Icon" /></span>
                       </a>
                     </li>
                   </ul>
