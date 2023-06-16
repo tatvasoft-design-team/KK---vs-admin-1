@@ -12,8 +12,14 @@ $theme-colors: (
 
 $primary: #1a6baf;
 $primary-gradient: linear-gradient(91.76deg, #1669ad 1.49%, #4484ba 98.58%);
+$primary-gradient-v-1: linear-gradient(
+  91deg,
+  rgba(68, 132, 186, 1) 0%,
+  rgba(22, 105, 173, 1) 100%
+);
 $primary-variant-1: #1d79c3;
 $primary-variant-2: #114978;
+$secondary-variant-1: #dad7d7;
 $text-dark: #444444;
 $text-grey: #aaaaaa;
 $grey-variant-1: #c4c4c4;
@@ -24,6 +30,7 @@ $danger: #f13838;
 $alert-success: #44e544;
 $alert-danger: #d93933;
 $alert-warning: #fb9f25;
+$white-variant-1: #f5f5f5;
 
 :root {
   --sidebar-width: 260px;

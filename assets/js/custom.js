@@ -40,7 +40,7 @@ window.addEventListener("resize", function () {
 });
 
 // On Load Page Visible
-window.addEventListener("load", function () {
+window.addEventListener("DOMContentLoaded", function () {
   document.body.classList.add("page-loaded");
 
   const navToggler = document.getElementById("nav-toggler");
@@ -48,19 +48,23 @@ window.addEventListener("load", function () {
   const overlay = document.getElementById("overlay");
   const overlaySearch = document.getElementById("overlay-search");
 
-  const toggleNav = () => {
-    document.body.classList.toggle("show-nav");
-  };
-  navToggler.addEventListener("click", toggleNav);
+  // AOS Initialization
+  AOS.init();
 
-  const toggleOverlay = () => {
-    document.body.classList.remove("show-nav", "show-searchbar");
-  };
-  overlay.addEventListener("click", toggleOverlay);
-  overlaySearch.addEventListener("click", toggleOverlay);
+  if (navToggler) {
+    const toggleNav = () => {
+      document.body.classList.toggle("show-nav");
+    };
+    navToggler.addEventListener("click", toggleNav);
+    const toggleOverlay = () => {
+      document.body.classList.remove("show-nav", "show-searchbar");
+    };
+    overlay.addEventListener("click", toggleOverlay);
+    overlaySearch.addEventListener("click", toggleOverlay);
 
-  const toggleSearchbar = () => {
-    document.body.classList.toggle("show-searchbar");
-  };
-  searchToggler.addEventListener("click", toggleSearchbar);
+    const toggleSearchbar = () => {
+      document.body.classList.toggle("show-searchbar");
+    };
+    searchToggler.addEventListener("click", toggleSearchbar);
+  }
 });

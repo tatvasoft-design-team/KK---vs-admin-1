@@ -104,7 +104,7 @@ a:hover {
 .form-floating > label {
   top: 14px;
   transition: all 0.3s;
-  color: #aaaaaa;
+  color: $text-grey;
   padding: 0 4px;
   height: auto;
   left: 12px;
@@ -194,6 +194,12 @@ a:hover {
   height: 20px;
   margin-top: 0;
   margin-left: 0;
+  &:hover {
+    border-color: $primary;
+    + .form-check-label {
+      color: $primary;
+    }
+  }
   cursor: pointer;
   margin-right: 8px;
   border-color: $grey-variant-1;
@@ -254,6 +260,9 @@ a:hover {
 
 /* Button
 --------------------------------------------------------------------------------------------------------*/
+.btn {
+  transition: all 0.3s;
+}
 .btn-grp {
   display: flex;
   align-items: center;
@@ -268,11 +277,11 @@ a:hover {
   padding: 9px 14px;
   border-radius: 12px;
   min-width: 120px;
-  background: linear-gradient(
-    91.76deg,
-    #1669ad 1.49%,
-    #4484ba 98.58%
-  ) !important;
+  background: $primary-gradient !important;
+  &:hover,
+  &:focus {
+    background: $primary-gradient-v-1 !important;
+  }
 }
 .btn-secondary {
   font-size: 16px;
@@ -282,6 +291,10 @@ a:hover {
   padding: 9px 14px;
   border-radius: 12px;
   min-width: 120px;
+  &:hover,
+  &:focus {
+    background: $secondary-variant-1;
+  }
 }
 
 .main {
@@ -332,7 +345,6 @@ a:hover {
   }
 }
 
-
 /* Alert
 --------------------------------------------------------------------------------------------------------*/
 .alert {
@@ -351,6 +363,8 @@ a:hover {
     margin-right: 21px;
   }
   .btn-close {
+    box-shadow: none !important;
+    min-width: 36px;
     margin-left: auto;
     --bs-btn-close-bg: url("../img/alert-close-ic.svg");
     opacity: 1;
@@ -360,6 +374,10 @@ a:hover {
     width: 36px;
     background-color: $white;
     border-radius: 50%;
+    &:hover,
+    &:focus {
+      background-color: $white-variant-1;
+    }
   }
   &.alert-success {
     background-color: rgba($color: $alert-success, $alpha: 0.25);
@@ -384,6 +402,7 @@ a:hover {
     border: none;
     margin: 0;
     padding: 6px 20px;
+    box-shadow: none !important;
     position: relative;
     &::after {
       content: "";
@@ -394,6 +413,10 @@ a:hover {
       width: 100%;
       border-radius: 50px;
       background-color: transparent;
+    }
+    &:hover,
+    &:focus {
+      color: $primary;
     }
     &.active {
       font-weight: 600;
@@ -415,7 +438,8 @@ a:hover {
 }
 /* overlay
 --------------------------------------------------------------------------------------------------------*/
-.overlay, .overlay-search {
+.overlay,
+.overlay-search {
   position: fixed;
   top: 0;
   left: 0;
@@ -427,7 +451,9 @@ a:hover {
   transition: all 150ms linear;
   background-color: rgba(0, 0, 0, 0.5);
 }
-.overlay{z-index: 7;}
+.overlay {
+  z-index: 7;
+}
 .show-nav .overlay,
 .show-searchbar .overlay-search {
   transform: translatex(0%);
@@ -443,14 +469,33 @@ a:hover {
     z-index: 7;
   }
   .show-nav {
+    overflow: hidden;
     .sidebar {
       margin-left: 0;
       transition: all 300ms ease;
     }
   }
   .show-searchbar {
+    overflow: hidden;
     .header .form-wrapper {
       top: 0;
+    }
+  }
+  @media (max-width: 575px) {
+    .alert p {
+      font-size: 16px;
+      line-height: 20px;
+    }
+    .nav-tabs {
+      flex-wrap: nowrap;
+      overflow: auto;
+    }
+    .nav-tabs .nav-link {
+      padding: 6px 10px;
+      white-space: nowrap;
+      &::after {
+        bottom: 0;
+      }
     }
   }
 }
