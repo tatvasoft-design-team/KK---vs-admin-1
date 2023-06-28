@@ -52,6 +52,7 @@ window.addEventListener("DOMContentLoaded", function () {
   AOS.init({
     duration: 500,
     easing: "ease-out",
+    once: true,
   });
 
   if (navToggler) {
@@ -97,5 +98,77 @@ window.addEventListener("DOMContentLoaded", function () {
       // e.classList.remove("scroll-left-end");
     }
     scrollLeftPrev = scroll_x;
+
+  // Chart JS
+  function myFunction() {
+    var ctx = document.getElementById("mainChart").getContext("2d");
+    var myChart = new Chart(ctx, {
+      type: "line",
+      data: {
+        labels: [
+          "Option 1",
+          "",
+          "Option 2",
+          "",
+          "Option 3",
+          "",
+          "Option 4",
+          "",
+          "Option 5",
+        ],
+        datasets: [
+          {
+            data: [25, 10, 2, 38, 30, 70, 60, 80, 20, 5],
+            fill: true,
+            borderColor: "#1A6BAF",
+            backgroundColor: "#1A6BAF",
+            tension: 0.3,
+          },
+          {
+            data: [10, 16, 30, 50, 70, 44, 80, 50, 48, 68],
+            fill: true,
+            borderColor: "#8cb5d7",
+            backgroundColor: "rgba(26, 107, 175, 0.5)",
+            tension: 0.3,
+          },
+        ],
+      },
+      options: {
+        radius: 0,
+        responsive: true,
+        plugins: {
+          legend: {
+            display: false,
+          },
+        },
+        animation: {
+          duration: 2500,
+          easing: "easeOutSine",
+        },
+      },
+    });
+  }
+
+  myFunction();
+
+  // var myPath = document.querySelector(".circle-progress-value");
+  var myPath = document.querySelector(".progress-1 path");
+  var length = myPath.getTotalLength();
+  console.log(length);
+
+
+  function circularProgress() {
+    bar.animate(0.8);  // Number from 0.0 to 1.0  
+  }
+
+  // Progress Animation
+  gsap.registerPlugin(ScrollTrigger);
+  const anim1 = gsap.timeline({
+    scrollTrigger: {
+      trigger: ".sale-card",
+      start: "top 60%",
+      end: "+=500",
+      onEnter: circularProgress,
+    },
   });
 });
