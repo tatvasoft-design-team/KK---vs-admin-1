@@ -72,33 +72,6 @@ window.addEventListener("DOMContentLoaded", function () {
     searchToggler.addEventListener("click", toggleSearchbar);
   }
 
-  // Tab SCroll
-  let primaryTab = document.querySelector(".primary-tab");
-  let eleWidth = primaryTab.offsetWidth;
-  let eleScrollWidth = primaryTab.scrollWidth;
-  let offset = 8;
-  // console.log(eleWidth);
-  console.log(eleScrollWidth);
-
-  primaryTab.addEventListener("scroll", (e) => {
-    // console.log("scrolled");
-    let scroll_x = e.scrollX;
-    console.log(scroll_x);
-
-    if (eleScrollWidth - scroll_x - eleWidth <= offset) {
-      e.classList.add("scroll-right-end");
-      console.log("scroll-right-end");
-    } else {
-      // e.classList.remove("scroll-right-end");
-    }
-    if (scroll_x === 0) {
-      e.classList.add("scroll-left-end");
-      console.log("scroll-left-end");
-    } else {
-      // e.classList.remove("scroll-left-end");
-    }
-    scrollLeftPrev = scroll_x;
-
   // Chart JS
   function myFunction() {
     var ctx = document.getElementById("mainChart").getContext("2d");
@@ -156,9 +129,8 @@ window.addEventListener("DOMContentLoaded", function () {
   var length = myPath.getTotalLength();
   console.log(length);
 
-
   function circularProgress() {
-    bar.animate(0.8);  // Number from 0.0 to 1.0  
+    bar.animate(0.8); // Number from 0.0 to 1.0
   }
 
   // Progress Animation
@@ -170,5 +142,33 @@ window.addEventListener("DOMContentLoaded", function () {
       end: "+=500",
       onEnter: circularProgress,
     },
+  });
+
+  // Tab SCroll
+  let primaryTab = document.querySelector(".primary-tab");
+  let eleWidth = primaryTab.offsetWidth;
+  let eleScrollWidth = primaryTab.scrollWidth;
+  let offset = 8;
+  // console.log(eleWidth);
+  console.log(eleScrollWidth);
+
+  primaryTab.addEventListener("scroll", (e) => {
+    // console.log("scrolled");
+    let scroll_x = e.scrollX;
+    console.log(scroll_x);
+
+    if (eleScrollWidth - scroll_x - eleWidth <= offset) {
+      e.classList.add("scroll-right-end");
+      console.log("scroll-right-end");
+    } else {
+      // e.classList.remove("scroll-right-end");
+    }
+    if (scroll_x === 0) {
+      e.classList.add("scroll-left-end");
+      console.log("scroll-left-end");
+    } else {
+      // e.classList.remove("scroll-left-end");
+    }
+    scrollLeftPrev = scroll_x;
   });
 });
