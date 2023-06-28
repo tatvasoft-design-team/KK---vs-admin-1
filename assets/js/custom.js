@@ -49,7 +49,10 @@ window.addEventListener("DOMContentLoaded", function () {
   const overlaySearch = document.getElementById("overlay-search");
 
   // AOS Initialization
-  AOS.init();
+  AOS.init({
+    duration: 500,
+    easing: "ease-out",
+  });
 
   if (navToggler) {
     const toggleNav = () => {
