@@ -136,7 +136,7 @@ window.addEventListener("DOMContentLoaded", function () {
   const anim1 = gsap.timeline({
     scrollTrigger: {
       trigger: ".sale-card",
-      start: "top 60%",
+      start: "top 70%",
       end: "+=500",
       onEnter: circularProgress,
     },
