@@ -1146,4 +1146,16 @@ window.addEventListener("DOMContentLoaded", function () {
       onEnter: circularProgress,
     },
   });
+
+  // Password Toggle
+  let togglePassword = document.querySelector(".password-btn");
+  const passwordInput = document.querySelector(".password-input");
+  togglePassword.addEventListener("click", () => {
+    togglePassword.classList.toggle("show-password");
+    if (passwordInput.getAttribute("type") === "password") {
+      passwordInput.setAttribute("type", "text");
+    } else {
+      passwordInput.setAttribute("type", "password");
+    }
+  });
 });
