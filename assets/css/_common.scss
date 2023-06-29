@@ -77,6 +77,10 @@ a:hover {
     .dropdown-item {
       color: $text-dark;
       padding: 8px 16px;
+      &:active,
+      &.active {
+        color: #fff;
+      }
     }
   }
 }
@@ -138,7 +142,7 @@ a:hover {
   min-height: 50px;
   line-height: 24px;
   color: $text-dark;
-  padding: 12px 16px;
+  padding: 10px 16px;
 }
 .form-floating > .form-control:-webkit-autofill ~ label {
   color: rgba(var(--bs-body-color-rgb), 0.65);
@@ -164,7 +168,7 @@ a:hover {
 .form-floating > .form-control:not(:placeholder-shown),
 .form-floating > .form-control-plaintext:focus,
 .form-floating > .form-control-plaintext:not(:placeholder-shown) {
-  padding-top: 15px;
+  padding-top: 10px;
   padding-bottom: 10px;
 }
 .form-control {
@@ -258,6 +262,7 @@ a:hover {
   line-height: 24px;
   color: $primary;
   position: relative;
+  white-space: nowrap;
   &::after {
     content: "";
     position: absolute;
@@ -512,7 +517,7 @@ a:hover {
       overflow: auto;
     }
     .nav-tabs .nav-link {
-      // padding: 6px 10px;
+      padding: 6px 10px;
       white-space: nowrap;
       &::after {
         bottom: 0;
