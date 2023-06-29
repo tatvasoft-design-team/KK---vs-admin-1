@@ -77,10 +77,6 @@ a:hover {
     .dropdown-item {
       color: $text-dark;
       padding: 8px 16px;
-      &:active,
-      &.active {
-        color: #fff;
-      }
     }
   }
 }
@@ -345,13 +341,14 @@ a:hover {
     position: relative;
     margin-right: 10px;
     gap: 8px;
+    &:hover{background-color:#2086d9;}
   }
   span {
     letter-spacing: 0.04em;
     font-weight: 500;
   }
   .form-control {
-    height: 36px;
+    height: 44px;
     border: none;
     position: absolute;
     left: 0;
