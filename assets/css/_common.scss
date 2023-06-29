@@ -60,6 +60,10 @@ a:hover {
   background: $grey-variant-6;
   border-radius: 10px;
 }
+input::-ms-reveal,
+input::-ms-clear {
+  display: none;
+}
 
 /* Button
 --------------------------------------------------------------------------------------------------------*/

@@ -11378,9 +11378,10 @@ h6, .h6 {
 .table tr {
   vertical-align: middle; }
   .table tr:first-child td {
-    padding-top: 20px; }
+    padding-top: 20px;
+    transition: all 0.3s; }
   .table tr:hover > td {
-    background-color: rgba(26, 107, 175, 0.15); }
+    background-color: #f4f7fa; }
   .table tr td {
     color: #444444;
     letter-spacing: 0.04em;
@@ -11409,6 +11410,9 @@ h6, .h6 {
     .table .table-action a img {
       position: relative;
       z-index: 1; }
+    .table .table-action a:first-of-type img {
+      height: 20px;
+      width: 20px; }
     .table .table-action a::after {
       content: "";
       position: absolute;
