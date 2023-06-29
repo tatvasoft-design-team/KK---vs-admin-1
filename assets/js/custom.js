@@ -124,11 +124,6 @@ window.addEventListener("DOMContentLoaded", function () {
 
   myFunction();
 
-  // var myPath = document.querySelector(".circle-progress-value");
-  var myPath = document.querySelector(".progress-1 path");
-  var length = myPath.getTotalLength();
-  console.log(length);
-
   function circularProgress() {
     bar.animate(0.8); // Number from 0.0 to 1.0
   }
@@ -138,7 +133,7 @@ window.addEventListener("DOMContentLoaded", function () {
   const anim1 = gsap.timeline({
     scrollTrigger: {
       trigger: ".sale-card",
-      start: "top 60%",
+      start: "top 70%",
       end: "+=500",
       onEnter: circularProgress,
     },
