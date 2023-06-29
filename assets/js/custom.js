@@ -55,6 +55,17 @@ window.addEventListener("DOMContentLoaded", function () {
     once: true,
   });
 
+  let togglePassword = document.querySelector(".password-btn");
+  const passwordInput = document.querySelector(".password-input");
+  togglePassword.addEventListener("click", () => {
+    togglePassword.classList.toggle("show-password");
+    if (passwordInput.getAttribute("type") === "password") {
+      passwordInput.setAttribute("type", "text");
+    } else {
+      passwordInput.setAttribute("type", "password");
+    }
+  });
+
   if (navToggler) {
     const toggleNav = () => {
       document.body.classList.toggle("show-nav");

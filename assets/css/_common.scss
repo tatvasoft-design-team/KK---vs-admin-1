@@ -37,6 +37,7 @@ a:hover {
 .form-control {
   box-shadow: none !important;
   outline: none !important;
+  transition: all 0.3s ease-in;
 }
 .dropdown-toggle::after {
   display: none;
@@ -74,6 +75,7 @@ a:hover {
     border-radius: 8px;
     box-shadow: 0px 4px 20px rgba(43, 117, 179, 0.25);
     border: none;
+    margin-top: 8px !important;
     .dropdown-item {
       color: $text-dark;
       padding: 8px 16px;
@@ -188,15 +190,31 @@ a:hover {
   width: 34px;
   height: 34px;
   border: 0 !important;
-  > img {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  img {
+    display: block;
+    transition: all 0.3s;
+    &:last-child {
+      margin-left: -24px;
+      opacity: 0;
+    }
   }
   &:hover,
   &:focus {
     background-color: rgba($color: $primary, $alpha: 0.2);
+  }
+}
+.password-btn.show-password {
+  img {
+    &:first-child {
+      opacity: 0;
+    }
+    &:last-child {
+      opacity: 1;
+    }
   }
 }
 /* Form Check & Radio
@@ -288,20 +306,55 @@ a:hover {
   gap: 20px;
   padding-bottom: 30px;
 }
-.btn-primary {font-size: 16px;line-height: 24px;letter-spacing: 0.04em;color: $white;padding: 9px 14px;border-radius: 12px;min-width: 120px;background: $primary-gradient !important;position: relative;overflow: hidden;z-index: 1 ;
+.btn-primary {
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.04em;
+  color: $white;
+  padding: 9px 14px;
+  border-radius: 12px;
+  min-width: 120px;
+  background: $primary-gradient !important;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
   &:hover,
   &:focus {
     background: $primary-gradient-v-1 !important;
   }
-  &:before {content: "";width: 100%;height: 100%;display: block;background: linear-gradient(90deg, #9C111B 0%, #BD1824 100%);position: absolute;left: 0%;opacity: 1;top: 0;z-index: -1;transition: all 0.65s cubic-bezier(0.77, 0, 0.175, 1);
-  }
-  &:after {content: "";width: 100%;height: 100%;display: block;background: #111111;position: absolute;left: 0%;opacity: 1;top: 0;z-index: -2;transition: all 0.65s cubic-bezier(0.77, 0, 0.175, 1);
-  }
-  &:hover:not(:focus, :active)::before, &:hover:not(:focus, :active)::before {
+  &:before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    display: block;
+    background: linear-gradient(90deg, #9c111b 0%, #bd1824 100%);
+    position: absolute;
+    left: 0%;
     opacity: 1;
-    transform: translateX(100%);  
+    top: 0;
+    z-index: -1;
+    transition: all 0.65s cubic-bezier(0.77, 0, 0.175, 1);
   }
-  &:hover:not(:focus, :active)::after, &:hover:not(:focus, :active)::after {
+  &:after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    display: block;
+    background: #111111;
+    position: absolute;
+    left: 0%;
+    opacity: 1;
+    top: 0;
+    z-index: -2;
+    transition: all 0.65s cubic-bezier(0.77, 0, 0.175, 1);
+  }
+  &:hover:not(:focus, :active)::before,
+  &:hover:not(:focus, :active)::before {
+    opacity: 1;
+    transform: translateX(100%);
+  }
+  &:hover:not(:focus, :active)::after,
+  &:hover:not(:focus, :active)::after {
     opacity: 1;
     transform: translateX(-100%);
   }
@@ -345,7 +398,9 @@ a:hover {
     position: relative;
     margin-right: 10px;
     gap: 8px;
-    &:hover{background-color:#2086d9;}
+    &:hover {
+      background-color: #2086d9;
+    }
   }
   span {
     letter-spacing: 0.04em;
