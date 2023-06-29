@@ -606,11 +606,12 @@ h6 {
     &:first-child {
       td {
         padding-top: 20px;
+        transition: all 0.3s;
       }
     }
     &:hover {
       > td {
-        background-color: rgba($color: $primary, $alpha: 0.15);
+        background-color: $light-variant-1;
       }
     }
     td {
