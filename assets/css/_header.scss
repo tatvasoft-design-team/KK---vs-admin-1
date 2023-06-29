@@ -29,14 +29,14 @@
         color: $text-dark;
       }
       &:focus {
-        border-width: 2px;
+        box-shadow: 1px 1px 16px 2px rgba(26, 107, 175, 0.15) !important;
       }
     }
     .btn {
       position: absolute;
       right: 0;
       top: 0;
-      padding: 11px;
+      padding: 12px;
       border-radius: 50%;
       vertical-align: middle;
       overflow: hidden;
@@ -63,7 +63,7 @@
         display: block;
         height: 24px;
         width: 24px;
-        fill: #1a6baf;
+        fill: $primary;
         transition: all 0.3s;
       }
       span {

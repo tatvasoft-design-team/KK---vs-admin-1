@@ -57,7 +57,7 @@ a:hover {
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: #8d9dab;
+  background: $grey-variant-6;
   border-radius: 10px;
 }
 
@@ -319,10 +319,6 @@ a:hover {
   position: relative;
   overflow: hidden;
   border: 0;
-  &:hover,
-  &:focus {
-    background: $primary-gradient;
-  }
   z-index: 1;
   &::before,
   &::after,
@@ -367,9 +363,27 @@ a:hover {
   padding: 9px 14px;
   border-radius: 12px;
   min-width: 120px;
+  position: relative;
+  overflow: hidden;
+  span {
+    position: relative;
+    z-index: 1;
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 0;
+    transition: all 0.3s;
+    background: $secondary-variant-1;
+  }
   &:hover,
   &:focus {
-    background: $secondary-variant-1;
+    &::after {
+      width: 100%;
+    }
   }
 }
 
@@ -398,13 +412,32 @@ a:hover {
     position: relative;
     margin-right: 10px;
     gap: 8px;
-    &:hover {
-      background-color: #2086d9;
+    overflow: hidden;
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      width: 0;
+      transition: all 0.3s;
+      background-color: $primary-variant-4;
     }
+    &:hover {
+      &::after {
+        width: 100%;
+      }
+    }
+  }
+  img {
+    position: relative;
+    z-index: 1;
   }
   span {
     letter-spacing: 0.04em;
     font-weight: 500;
+    position: relative;
+    z-index: 1;
   }
   .form-control {
     height: 44px;

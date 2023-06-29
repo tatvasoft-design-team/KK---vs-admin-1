@@ -775,8 +775,8 @@ h6 {
   font-size: 38px;
   line-height: 42px;
   letter-spacing: 0.04em;
-  fill: #444444;
-  color: #444444 !important;
+  fill: $text-dark;
+  color: $text-dark !important;
 }
 .progress-1 {
   width: 100%;
@@ -819,7 +819,7 @@ h6 {
   width: 120px;
   height: 120px;
   content: "";
-  border: 2px solid #fb4f14;
+  border: 2px solid transparent;
   border-radius: 50%;
   display: block;
   position: absolute;
@@ -829,7 +829,7 @@ h6 {
 
 .circle canvas {
   vertical-align: middle;
-  border: 2px solid #fb4f14;
+  border: 2px solid transparent;
   border-radius: 50%;
 }
 
@@ -856,7 +856,7 @@ h6 {
 
 .circle canvas {
   vertical-align: middle;
-  border: 2px solid #fb4f14;
+  border: 2px solid transparent;
   border-radius: 50%;
 }
 
