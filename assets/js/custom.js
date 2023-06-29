@@ -141,32 +141,4 @@ window.addEventListener("DOMContentLoaded", function () {
       onEnter: circularProgress,
     },
   });
-
-  // Tab SCroll
-  let primaryTab = document.querySelector(".primary-tab");
-  let eleWidth = primaryTab.offsetWidth;
-  let eleScrollWidth = primaryTab.scrollWidth;
-  let offset = 8;
-  // console.log(eleWidth);
-  console.log(eleScrollWidth);
-
-  primaryTab.addEventListener("scroll", (e) => {
-    // console.log("scrolled");
-    let scroll_x = e.scrollX;
-    console.log(scroll_x);
-
-    if (eleScrollWidth - scroll_x - eleWidth <= offset) {
-      e.classList.add("scroll-right-end");
-      console.log("scroll-right-end");
-    } else {
-      // e.classList.remove("scroll-right-end");
-    }
-    if (scroll_x === 0) {
-      e.classList.add("scroll-left-end");
-      console.log("scroll-left-end");
-    } else {
-      // e.classList.remove("scroll-left-end");
-    }
-    scrollLeftPrev = scroll_x;
-  });
 });
