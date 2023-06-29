@@ -1,0 +1,743 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <title>Innerpage</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description"
+    content="Meta descriptions may be included in search results to concisely summarize page content." />
+  <link rel="shortcut icon" href="assets/img/favicon.ico" />
+
+  <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <div class="overlay" id="overlay"></div>
+    <!-- Start Navbar -->
+    <div class="sidebar">
+      <a href="#" title="Logo" class="logo" data-aos="fade-in" data-aos-delay="100">
+        <img src="assets/img/logo.svg" alt="Logo" />
+      </a>
+      <ul>
+        <li data-aos="fade-right" data-aos-delay="200">
+          <a href="dashboard.html" title="Dashboard">
+            <img src="assets/img/dashboard-default-ic.svg" alt="Dashboard" />
+            <img src="assets/img/dashboard-active-ic.svg" alt="Dashboard" />
+            <span>Dashboard</span>
+          </a>
+        </li>
+        <li data-aos="fade-right" data-aos-delay="300">
+          <a href="inner.html" title="Innerpage" class="active">
+            <img src="assets/img/innerpage-default-ic.svg" alt="Innerpage" />
+            <img src="assets/img/innerpage-active-ic.svg" alt="Innerpage" />
+            <span>Innerpage</span>
+          </a>
+        </li>
+        <li data-aos="fade-right" data-aos-delay="400">
+          <a href="#" title="Tasks">
+            <img src="assets/img/task-default-ic.svg" alt="Tasks" />
+            <img src="assets/img/task-active-ic.svg" alt="Tasks" />
+            <span>Tasks</span>
+          </a>
+        </li>
+        <li data-aos="fade-right" data-aos-delay="500">
+          <a href="#" title="Setting">
+            <img src="assets/img/setting-default-ic.svg" alt="Setting" />
+            <img src="assets/img/setting-active-ic.svg" alt="Setting" />
+            <span>Setting</span>
+          </a>
+        </li>
+        <li data-aos="fade-right" data-aos-delay="600">
+          <a href="#" title="Report">
+            <img src="assets/img/report-default-ic.svg" alt="Report" />
+            <img src="assets/img/report-active-ic.svg" alt="Report" />
+            <span>Report</span>
+          </a>
+        </li>
+        <li data-aos="fade-right" data-aos-delay="700">
+          <a href="#" title="Chart">
+            <img src="assets/img/chart-default-ic.svg" alt="Chart" />
+            <img src="assets/img/chart-active-ic.svg" alt="Chart" />
+            <span>Chart</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <!-- End Navbar -->
+    <main class="main">
+      <!-- Start Header -->
+      <nav class="header">
+        <div class="overlay-search" id="overlay-search"></div>
+        <button class="btn btn-primary nav-toggler d-lg-none" type="button" id="nav-toggler">
+          <img src="./assets/img/menu-white-ic.svg" alt="Menu" />
+        </button>
+        <div class="logo-block d-lg-none">
+          <a href="#" class="logo" title="Logo"><img src="./assets/img/mobile-logo.svg" alt="Logo" /></a>
+        </div>
+        <form class="form-wrapper" role="search">
+          <input class="form-control" type="search" placeholder="Search" aria-label="Search" />
+          <button class="btn btn-primary" type="button">
+            <img src="assets/img/search-ic.svg" alt="Search" />
+          </button>
+        </form>
+        <ul class="navbar-nav ms-auto ms-md-0 ms-lg-auto">
+          <li class="nav-item dropdown icon-dropdown d-md-none">
+            <a class="nav-link icon-btn dropdown-toggle" href="#" role="button" id="search-toggler">
+              <img src="assets/img/search-ic-primary.svg" alt="Search" />
+            </a>
+          </li>
+          <li class="nav-item dropdown icon-dropdown notification-dropdown">
+            <a class="nav-link icon-btn dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              <img src="assets/img/notification-ic.svg" alt="Notification" />
+              <span>2</span>
+            </a>
+            <ul class="dropdown-menu dropdown-menu-end">
+              <li>Notifications</li>
+              <li>
+                <ul>
+                  <li>
+                    <a class="dropdown-item" href="#">
+                      <span class="icon"><img src="assets/img/alert-ic.svg" alt="Alert" /></span>
+                      <div class="content">
+                        <p>Lorem Ipsum Dummy Text</p>
+                        <span>1m ago</span>
+                      </div>
+                    </a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#">
+                      <span class="icon"><img src="assets/img/alert-ic.svg" alt="Alert" /></span>
+                      <div class="content">
+                        <p>Lorem Ipsum Dummy Text</p>
+                        <span>1s ago</span>
+                      </div>
+                    </a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#">
+                      <span class="icon"><img src="assets/img/alert-ic.svg" alt="Alert" /></span>
+                      <div class="content">
+                        <p>Lorem Ipsum Dummy Text</p>
+                        <span>1hr ago</span>
+                      </div>
+                    </a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#">
+                      <span class="icon"><img src="assets/img/alert-ic.svg" alt="Alert" /></span>
+                      <div class="content">
+                        <p>Lorem Ipsum Dummy Text</p>
+                        <span>1m 20s ago</span>
+                      </div>
+                    </a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#">
+                      <span class="icon"><img src="assets/img/alert-ic.svg" alt="Alert" /></span>
+                      <div class="content">
+                        <p>Lorem Ipsum Dummy Text</p>
+                        <span>1hr 20m 20s ago</span>
+                      </div>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <a href="#">View All
+                  <img src="assets/img/arrow-down-ic.svg" alt="Arrow Down" /></a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown icon-dropdown msg-dropdown">
+            <a class="nav-link icon-btn dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              <img src="assets/img/message-ic.svg" alt="Message" />
+              <span>2</span>
+            </a>
+            <ul class="dropdown-menu dropdown-menu-end">
+              <li>Messages</li>
+              <li>
+                <ul>
+                  <li>
+                    <a class="dropdown-item" href="#">
+                      <span class="icon"><img src="assets/img/user-img.png" alt="User Pic" /></span>
+                      <div class="chat-content">
+                        <div class="name-block">
+                          <p>John Doe</p>
+                          <span>08:01 PM</span>
+                        </div>
+                        <span>Hi, How are you.</span>
+                      </div>
+                    </a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#">
+                      <span class="icon"><img src="assets/img/user-img.png" alt="User Pic" /></span>
+                      <div class="chat-content">
+                        <div class="name-block">
+                          <p>John Doe</p>
+                          <span>08:01 PM</span>
+                        </div>
+                        <span>Hi, How are you. What are you doing</span>
+                      </div>
+                    </a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#">
+                      <span class="icon"><img src="assets/img/user-img.png" alt="User Pic" /></span>
+                      <div class="chat-content">
+                        <div class="name-block">
+                          <p>John Doe</p>
+                          <span>08:01 PM</span>
+                        </div>
+                        <span>Hi, How are you.o</span>
+                      </div>
+                    </a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#">
+                      <span class="icon"><img src="assets/img/user-img.png" alt="User Pic" /></span>
+                      <div class="chat-content">
+                        <div class="name-block">
+                          <p>John Doe</p>
+                          <span>08:01 PM</span>
+                        </div>
+                        <span>Hi, How are you. What are you doing</span>
+                      </div>
+                    </a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#">
+                      <span class="icon"><img src="assets/img/user-img.png" alt="User Pic" /></span>
+                      <div class="chat-content">
+                        <div class="name-block">
+                          <p>John Doe</p>
+                          <span>08:01 PM</span>
+                        </div>
+                        <span>Hi, How are you.m 20s ago</span>
+                      </div>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <a href="#">View All
+                  <img src="assets/img/arrow-down-ic.svg" alt="Arrow Down" /></a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown profile-dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <img src="assets/img/user-profile.png" alt="User" />
+            </a>
+            <ul class="dropdown-menu dropdown-menu-end profile-dropdown-menu primary-dropdown-menu">
+              <li>
+                <a class="dropdown-item" href="login.html">
+                  <img src="assets/img/logout.svg" alt="Logout" />
+                  <span>Logout</span>
+                </a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <!-- End Header -->
+      <!-- Main Content -->
+      <section class="main-content innerpage">
+        <div class="row primary-row section-row">
+          <div class="col-12" data-aos="fade-up" data-aos-delay="200">
+            <div class="card primary-card table-card">
+              <div class="card-header">
+                <h4>Users</h4>
+                <div class="dropdown with-text">
+                  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Filter
+                    <img src="./assets/img/ic-dropdown.svg" alt="Icon" />
+                  </button>
+                  <ul class="dropdown-menu dropdown-menu-end primary-dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Action 1</a></li>
+                    <li>
+                      <a class="dropdown-item" href="#">Another action</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="#">Something else here</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="table-outer">
+                <div class="table-responsive">
+                  <table class="table">
+                    <thead>
+                      <tr>
+                        <th scope="col">Record Id</th>
+                        <th scope="col">Name</th>
+                        <th scope="col">DOB</th>
+                        <th scope="col">Mobile No.</th>
+                        <th scope="col">Email</th>
+                        <th scope="col" class="text-end">Actions</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>
+                          <div class="user-id">
+                            <img src="./assets/img/user2.png" alt="User" />
+                            <span>ET0001</span>
+                          </div>
+                        </td>
+                        <td>Darlene</td>
+                        <td>5/19/12</td>
+                        <td>(270) 555-0117</td>
+                        <td>tim@example.com</td>
+                        <td>
+                          <div class="table-action">
+                            <a href="#" title="Edit">
+                              <img src="./assets/img/ic-edit.svg" alt="Edit" />
+                            </a>
+                            <a href="#" title="Delete">
+                              <img src="./assets/img/ic-delete.svg" alt="Delete" />
+                            </a>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <div class="user-id">
+                            <img src="./assets/img/user3.png" alt="User" />
+                            <span>ET0002</span>
+                          </div>
+                        </td>
+                        <td>Theresa</td>
+                        <td>2/11/12</td>
+                        <td>(629) 555-0129</td>
+                        <td>jessica@example.com</td>
+                        <td>
+                          <div class="table-action">
+                            <a href="#" title="Edit">
+                              <img src="./assets/img/ic-edit.svg" alt="Edit" />
+                            </a>
+                            <a href="#" title="Delete">
+                              <img src="./assets/img/ic-delete.svg" alt="Delete" />
+                            </a>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <div class="user-id">
+                            <img src="./assets/img/user4.png" alt="User" />
+                            <span>ET0003</span>
+                          </div>
+                        </td>
+                        <td>Marvin</td>
+                        <td>7/18/17</td>
+                        <td>(684) 555-0102</td>
+                        <td>sara@example.com</td>
+                        <td>
+                          <div class="table-action">
+                            <a href="#" title="Edit">
+                              <img src="./assets/img/ic-edit.svg" alt="Edit" />
+                            </a>
+                            <a href="#" title="Delete">
+                              <img src="./assets/img/ic-delete.svg" alt="Delete" />
+                            </a>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <div class="user-id">
+                            <img src="./assets/img/user5.png" alt="User" />
+                            <span>ET0004</span>
+                          </div>
+                        </td>
+                        <td>Bessie</td>
+                        <td>12/4/17</td>
+                        <td>(208) 555-0112</td>
+                        <td>willie@example.com</td>
+                        <td>
+                          <div class="table-action">
+                            <a href="#" title="Edit">
+                              <img src="./assets/img/ic-edit.svg" alt="Edit" />
+                            </a>
+                            <a href="#" title="Delete">
+                              <img src="./assets/img/ic-delete.svg" alt="Delete" />
+                            </a>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <div class="user-id">
+                            <img src="./assets/img/user6.png" alt="User" />
+                            <span>ET0005</span>
+                          </div>
+                        </td>
+                        <td>Cody</td>
+                        <td>6/21/19</td>
+                        <td>(907) 555-0101</td>
+                        <td>michelle@example.com</td>
+                        <td>
+                          <div class="table-action">
+                            <a href="#" title="Edit">
+                              <img src="./assets/img/ic-edit.svg" alt="Edit" />
+                            </a>
+                            <a href="#" title="Delete">
+                              <img src="./assets/img/ic-delete.svg" alt="Delete" />
+                            </a>
+                          </div>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <nav>
+                  <ul class="pagination">
+                    <li class="page-item">
+                      <a class="page-link" href="#" aria-label="Previous">
+                        <span aria-hidden="true"><img src="./assets/img/ic-pagination-prev.svg" alt="Icon" /></span>
+                      </a>
+                    </li>
+                    <li class="page-item">
+                      <a class="page-link active" href="#">1</a>
+                    </li>
+                    <li class="page-item">
+                      <a class="page-link" href="#">2</a>
+                    </li>
+                    <li class="page-item">
+                      <a class="page-link" href="#">3</a>
+                    </li>
+                    <li class="page-item">
+                      <a class="page-link" href="#">4</a>
+                    </li>
+                    <li class="page-item">
+                      <a class="page-link" href="#">5</a>
+                    </li>
+                    <li class="page-item">
+                      <a class="page-link" href="#" aria-label="Next">
+                        <span aria-hidden="true"><img src="./assets/img/ic-pagination-next.svg" alt="Icon" /></span>
+                      </a>
+                    </li>
+                  </ul>
+                </nav>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row primary-row section-row">
+          <div class="col-12">
+            <div class="card primary-card">
+              <div data-aos="fade-up" data-aos-delay="400">
+                <h4 class="primary-heading">Form Elements</h4>
+                <div class="form-floating">
+                  <input type="text" class="form-control" id="name" placeholder="Name" />
+                  <label for="name">Name</label>
+                </div>
+                <div class="form-floating">
+                  <select class="form-select">
+                    <option value="1">One</option>
+                    <option value="2">Two</option>
+                    <option value="3">Three</option>
+                  </select>
+                  <label for="name">Dropdown 1</label>
+                </div>
+                <div class="form-floating pb-10">
+                  <textarea class="form-control" placeholder="Textarea" id="floatingTextarea" rows="3"></textarea>
+                  <label for="floatingTextarea">Textarea</label>
+                </div>
+              </div>
+              <div data-aos="fade-up" data-aos-delay="200">
+                <h4 class="primary-heading">Two Column</h4>
+                <div class="row pb-10">
+                  <div class="col-sm-6">
+                    <div class="form-floating">
+                      <input type="text" class="form-control" id="name" placeholder="Name" />
+                      <label for="name">Name</label>
+                    </div>
+                  </div>
+                  <div class="col-sm-6">
+                    <div class="form-floating">
+                      <input type="text" class="form-control" id="focus" placeholder="Focus" value="Lorem Ipsum" />
+                      <label for="focus">Focus</label>
+                    </div>
+                  </div>
+                  <div class="col-sm-6">
+                    <div class="form-floating">
+                      <select class="form-select">
+                        <option value="1">One</option>
+                        <option value="2">Two</option>
+                        <option value="3">Three</option>
+                      </select>
+                      <label for="name">Dropdown 1</label>
+                    </div>
+                  </div>
+                  <div class="col-sm-6">
+                    <div class="form-floating">
+                      <select class="form-select">
+                        <option value="1">One</option>
+                        <option value="2">Two</option>
+                        <option value="3">Three</option>
+                      </select>
+                      <label for="name">Dropdown 1</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div data-aos="fade-up" data-aos-delay="200">
+                <h4 class="primary-heading">Three Column</h4>
+                <div class="row pb-10">
+                  <div class="col-sm-6 col-xl-4">
+                    <div class="form-floating">
+                      <input type="text" class="form-control" id="fname" placeholder="First Name" />
+                      <label for="fname">First Name</label>
+                    </div>
+                  </div>
+                  <div class="col-sm-6 col-xl-4">
+                    <div class="form-floating">
+                      <input type="text" class="form-control" id="email" placeholder="Email" value="xyz@gmail.com" />
+                      <label for="email">Email</label>
+                    </div>
+                  </div>
+                  <div class="col-sm-6 col-xl-4">
+                    <div class="form-floating">
+                      <input type="text" class="form-control" id="focus" placeholder="Focus" value="Lorem Ipsum" />
+                      <label for="focus">Focus</label>
+                    </div>
+                  </div>
+                  <div class="col-sm-6 col-xl-4">
+                    <div class="form-floating">
+                      <select class="form-select">
+                        <option value="1">One</option>
+                        <option value="2">Two</option>
+                        <option value="3">Three</option>
+                      </select>
+                      <label for="name">Dropdown 1</label>
+                    </div>
+                  </div>
+                  <div class="col-sm-6 col-xl-4">
+                    <div class="form-floating">
+                      <select class="form-select">
+                        <option value="1">One</option>
+                        <option value="2">Two</option>
+                        <option value="3">Three</option>
+                      </select>
+                      <label for="name">Dropdown 1</label>
+                    </div>
+                  </div>
+                  <div class="col-sm-6 col-xl-4">
+                    <div class="form-floating">
+                      <select class="form-select">
+                        <option value="1">One</option>
+                        <option value="2">Two</option>
+                        <option value="3">Three</option>
+                      </select>
+                      <label for="name">Dropdown 1</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div data-aos="fade-up" data-aos-delay="200">
+                <h4 class="primary-heading">Four Column</h4>
+                <div class="row">
+                  <div class="col-sm-6 col-xl-4 col-xxl-3">
+                    <div class="form-floating">
+                      <input type="text" class="form-control" id="fname" placeholder="First Name" />
+                      <label for="fname">First Name</label>
+                    </div>
+                  </div>
+                  <div class="col-sm-6 col-xl-4 col-xxl-3">
+                    <div class="form-floating">
+                      <input type="text" class="form-control" id="lname" placeholder="Last Name" />
+                      <label for="lname">Last Name</label>
+                    </div>
+                  </div>
+                  <div class="col-sm-6 col-xl-4 col-xxl-3">
+                    <div class="form-floating">
+                      <input type="text" class="form-control" id="email" placeholder="Email" value="xyz@gmail.com" />
+                      <label for="email">Email</label>
+                    </div>
+                  </div>
+                  <div class="col-sm-6 col-xl-4 col-xxl-3">
+                    <div class="form-floating">
+                      <input type="text" class="form-control" id="focus" placeholder="Focus" value="Lorem Ipsum" />
+                      <label for="focus">Focus</label>
+                    </div>
+                  </div>
+                  <div class="col-sm-6 col-xl-4 col-xxl-3">
+                    <div class="form-floating">
+                      <select class="form-select">
+                        <option value="1">One</option>
+                        <option value="2">Two</option>
+                        <option value="3">Three</option>
+                      </select>
+                      <label for="name">Dropdown 1</label>
+                    </div>
+                  </div>
+                  <div class="col-sm-6 col-xl-4 col-xxl-3">
+                    <div class="form-floating">
+                      <select class="form-select">
+                        <option value="1">One</option>
+                        <option value="2">Two</option>
+                        <option value="3">Three</option>
+                      </select>
+                      <label for="name">Dropdown 1</label>
+                    </div>
+                  </div>
+                  <div class="col-sm-6 col-xl-4 col-xxl-3">
+                    <div class="form-floating">
+                      <select class="form-select">
+                        <option value="1">One</option>
+                        <option value="2">Two</option>
+                        <option value="3">Three</option>
+                      </select>
+                      <label for="name">Dropdown 1</label>
+                    </div>
+                  </div>
+                  <div class="col-sm-6 col-xl-4 col-xxl-3">
+                    <div class="form-floating">
+                      <select class="form-select">
+                        <option value="1">One</option>
+                        <option value="2" selected>Two</option>
+                        <option value="3">Three</option>
+                      </select>
+                      <label for="name">Dropdown 1</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div data-aos="fade-up" data-aos-delay="200">
+                <h4 class="primary-heading other-element">
+                  Other Form Elements
+                </h4>
+                <h6>File Upload</h6>
+                <div class="input-group file-upload">
+                  <label for="inputGroupFile02">
+                    <img src="assets/img/file-upload-ic.svg" alt="Upload File" />
+                    <span>Choose FIle</span>
+                    <input type="file" class="form-control" id="inputGroupFile02" />
+                  </label>
+                  <p>No file selected</p>
+                </div>
+              </div>
+              <div data-aos="fade-up" data-aos-delay="200">
+                <h6>Checkbox</h6>
+                <div class="checkbox-grp">
+                  <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1" />
+                    <label class="form-check-label" for="inlineCheckbox1">Option 1</label>
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2" checked />
+                    <label class="form-check-label" for="inlineCheckbox2">Option 2</label>
+                  </div>
+                </div>
+              </div>
+              <div data-aos="fade-up" data-aos-delay="200">
+                <h6>Radio Button</h6>
+                <div class="radio-grp">
+                  <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1"
+                      value="option1" />
+                    <label class="form-check-label" for="inlineRadio1">Option 1</label>
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" checked
+                      value="option2" />
+                    <label class="form-check-label" for="inlineRadio2">Option 2</label>
+                  </div>
+                </div>
+              </div>
+              <div data-aos="fade-up" data-aos-delay="200">
+                <h6>Buttons</h6>
+                <div class="btn-grp">
+                  <button type="button" class="btn btn-primary">Primary</button>
+                  <button type="button" class="btn btn-secondary">
+                    Secondary
+                  </button>
+                </div>
+              </div>
+              <div data-aos="fade-up" data-aos-delay="200">
+                <h6>Alerts</h6>
+                <div class="alert alert-success d-flex align-items-center" role="alert">
+                  <img src="assets/img/success-alert-ic.svg" alt="Success">
+                  <p class="text-success">
+                    This is a success message.
+                  </p>
+                  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close">
+                  </button>
+                </div>
+                <div class="alert alert-danger d-flex align-items-center" role="alert">
+                  <img src="assets/img/error-alert-ic.svg" alt="Error">
+                  <p class="text-danger">
+                    This is an error message.
+                  </p>
+                  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close">
+                  </button>
+                </div>
+                <div class="alert alert-warning d-flex align-items-center" role="Warning">
+                  <img src="assets/img/warning-alert-ic.svg" alt="Success">
+                  <p class="text-warning">
+                    This is a warning message.
+                  </p>
+                  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close">
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row primary-row">
+          <div class="col-12">
+            <div class="card primary-card" data-aos="fade-up" data-aos-delay="200">
+              <h4 class="primary-heading tab-heading">Tabs</h4>
+              <nav>
+                <div class="nav nav-tabs primary-tab" id="nav-tab" role="tablist">
+                  <button class="nav-link active" id="option-1-tab" data-bs-toggle="tab" data-bs-target="#option-1"
+                    type="button" role="tab" aria-controls="option-1" aria-selected="true">Option 1</button>
+                  <button class="nav-link" id="option-2-tab" data-bs-toggle="tab" data-bs-target="#option-2"
+                    type="button" role="tab" aria-controls="option-2" aria-selected="false">Option 2</button>
+                  <button class="nav-link" id="option-3-tab" data-bs-toggle="tab" data-bs-target="#option-3"
+                    type="button" role="tab" aria-controls="option-3" aria-selected="false">Option 3</button>
+                </div>
+              </nav>
+              <div class="tab-content" id="nav-tabContent">
+                <div class="tab-pane fade show active" id="option-1" role="tabpanel" aria-labelledby="option-1-tab"
+                  tabindex="0">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vel, massa dolor dignissim dolor. Ut mus vel
+                  sed mattis ullamcorper tortor id tellus nec. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  Vel, massa dolor dignissim dolor. Ut mus vel sed mattis ullamcorper tortor id tellus nec.Lorem ipsum
+                  dolor sit amet, consectetur adipiscing elit. Vel, massa dolor dignissim dolor. Ut mus vel sed mattis
+                  ullamcorper tortor id tellus nec.
+                </div>
+                <div class="tab-pane fade" id="option-2" role="tabpanel" aria-labelledby="option-2-tab" tabindex="0">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vel, massa dolor dignissim dolor. Ut mus vel
+                  sed mattis ullamcorper tortor id tellus nec. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  Vel, massa dolor dignissim dolor. Ut mus vel sed mattis ullamcorper tortor id tellus nec.Lorem ipsum
+                  dolor sit amet, consectetur adipiscing elit. Vel, massa dolor dignissim dolor. Ut mus vel sed mattis
+                  ullamcorper tortor id tellus nec.Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  Vel, massa dolor dignissim dolor.
+                </div>
+                <div class="tab-pane fade" id="option-3" role="tabpanel" aria-labelledby="option-3-tab" tabindex="0">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vel, massa dolor dignissim dolor. Ut mus vel
+                  sed mattis ullamcorper tortor id tellus nec. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  Vel, massa dolor dignissim dolor.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- End Main Content -->
+    </main>
+  </div>
+
+  <!-- JavaScripts -->
+  <script src="assets/js/script.js"></script>
+</body>
+
+</html>
