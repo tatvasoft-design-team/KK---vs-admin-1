@@ -9999,7 +9999,8 @@ a:hover {
 
 .form-control {
   box-shadow: none !important;
-  outline: none !important; }
+  outline: none !important;
+  transition: all 0.3s ease-in; }
 
 .dropdown-toggle::after {
   display: none; }
@@ -10029,7 +10030,8 @@ a:hover {
 .dropdown .dropdown-menu {
   border-radius: 8px;
   box-shadow: 0px 4px 20px rgba(43, 117, 179, 0.25);
-  border: none; }
+  border: none;
+  margin-top: 8px !important; }
   .dropdown .dropdown-menu .dropdown-item {
     color: #444444;
     padding: 8px 16px; }
@@ -10127,14 +10129,25 @@ a:hover {
   border-radius: 50%;
   width: 34px;
   height: 34px;
-  border: 0 !important; }
-  .password-btn > img {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%); }
+  border: 0 !important;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+  .password-btn img {
+    display: block;
+    transition: all 0.3s; }
+    .password-btn img:last-child {
+      margin-left: -24px;
+      opacity: 0; }
   .password-btn:hover, .password-btn:focus {
     background-color: rgba(26, 107, 175, 0.2); }
+
+.password-btn.show-password img:first-child {
+  opacity: 0; }
+
+.password-btn.show-password img:last-child {
+  opacity: 1; }
 
 /* Form Check & Radio
 --------------------------------------------------------------------------------------------------------*/
@@ -10197,9 +10210,9 @@ a:hover {
     height: 2px;
     background-color: #1a6baf;
     transition: all 300ms ease; }
-  .primary-link:hover {
+  .primary-link:hover, .primary-link:focus {
     color: #1a6baf; }
-    .primary-link:hover::after {
+    .primary-link:hover::after, .primary-link:focus::after {
       width: 100%; }
 
 /* Button
@@ -10218,12 +10231,41 @@ a:hover {
   line-height: 24px;
   letter-spacing: 0.04em;
   color: #fff;
-  padding: 9px 14px;
+  padding: 10px 14px;
   border-radius: 12px;
   min-width: 120px;
-  background: linear-gradient(91.76deg, #1669ad 1.49%, #4484ba 98.58%) !important; }
-  .btn-primary:hover, .btn-primary:focus {
-    background: linear-gradient(91deg, #4484ba 0%, #1669ad 100%) !important; }
+  background: linear-gradient(91.76deg, #1669ad 1.49%, #4484ba 98.58%) !important;
+  position: relative;
+  overflow: hidden;
+  border: 0;
+  z-index: 1; }
+  .btn-primary::before, .btn-primary::after,
+  .btn-primary span::before,
+  .btn-primary span::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background-color: rgba(0, 81, 149, 0.25);
+    transition: 0.4s;
+    z-index: -1; }
+  .btn-primary:hover:before, .btn-primary:hover:after,
+  .btn-primary:hover span:before,
+  .btn-primary:hover span:after, .btn-primary:focus:before, .btn-primary:focus:after,
+  .btn-primary:focus span:before,
+  .btn-primary:focus span:after {
+    width: 100%; }
+
+.btn-primary:after,
+.btn-primary span:before {
+  left: auto;
+  right: 0; }
+
+.btn-primary span:before,
+.btn-primary span:after {
+  transition-delay: 0.4s; }
 
 .btn-secondary {
   font-size: 16px;
@@ -10232,9 +10274,23 @@ a:hover {
   color: #444444;
   padding: 9px 14px;
   border-radius: 12px;
-  min-width: 120px; }
-  .btn-secondary:hover, .btn-secondary:focus {
+  min-width: 120px;
+  position: relative;
+  overflow: hidden; }
+  .btn-secondary span {
+    position: relative;
+    z-index: 1; }
+  .btn-secondary::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 0;
+    transition: all 0.3s;
     background: #dad7d7; }
+  .btn-secondary:hover::after, .btn-secondary:focus::after {
+    width: 100%; }
 
 .main {
   max-width: calc(100% - var(--sidebar-width));
@@ -10259,12 +10315,27 @@ a:hover {
     transition: all 0.3s;
     position: relative;
     margin-right: 10px;
-    gap: 8px; }
-    .file-upload label:hover {
+    gap: 8px;
+    overflow: hidden; }
+    .file-upload label::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      width: 0;
+      transition: all 0.3s;
       background-color: #2086d9; }
+    .file-upload label:hover::after {
+      width: 100%; }
+  .file-upload img {
+    position: relative;
+    z-index: 1; }
   .file-upload span {
     letter-spacing: 0.04em;
-    font-weight: 500; }
+    font-weight: 500;
+    position: relative;
+    z-index: 1; }
   .file-upload .form-control {
     height: 44px;
     border: none;
@@ -10437,11 +10508,13 @@ a:hover {
         color: #444444; }
       .header .form-wrapper .form-control::placeholder {
         color: #444444; }
+      .header .form-wrapper .form-control:focus {
+        box-shadow: 1px 1px 16px 2px rgba(26, 107, 175, 0.15) !important; }
     .header .form-wrapper .btn {
       position: absolute;
       right: 0;
       top: 0;
-      padding: 11px;
+      padding: 12px;
       border-radius: 50%;
       vertical-align: middle;
       overflow: hidden;
@@ -10461,8 +10534,12 @@ a:hover {
       display: inline-block;
       vertical-align: middle;
       transition: all 0.3s; }
-      .header .navbar-nav .icon-btn img {
-        display: block; }
+      .header .navbar-nav .icon-btn svg {
+        display: block;
+        height: 24px;
+        width: 24px;
+        fill: #1a6baf;
+        transition: all 0.3s; }
       .header .navbar-nav .icon-btn span {
         height: 25px;
         width: 25px;
@@ -10478,7 +10555,11 @@ a:hover {
         font-size: 12px;
         line-height: 18px; }
       .header .navbar-nav .icon-btn:hover, .header .navbar-nav .icon-btn:focus {
-        background-color: rgba(26, 107, 175, 0.07); }
+        background-color: #1a6baf; }
+        .header .navbar-nav .icon-btn:hover img, .header .navbar-nav .icon-btn:focus img {
+          filter: brightness(10); }
+        .header .navbar-nav .icon-btn:hover svg, .header .navbar-nav .icon-btn:focus svg {
+          fill: #fff; }
     .header .navbar-nav .dropdown-menu {
       padding: 0; }
       .header .navbar-nav .dropdown-menu ul li {
@@ -10556,7 +10637,7 @@ a:hover {
               color: #1a6baf;
               display: block; }
           .header .navbar-nav .icon-dropdown .dropdown-menu ul li .chat-content {
-            background-color: rgba(26, 107, 175, 0.15);
+            background-color: #dde9f3;
             border-radius: 6px;
             width: 100%;
             padding: 7px 10px; }
@@ -10867,7 +10948,7 @@ h6, .h6 {
   line-height: 26px;
   font-weight: 600;
   letter-spacing: 0;
-  padding: 12px;
+  padding: 13px 12px;
   border-radius: 10px; }
 
 .mini-cards {
@@ -11298,6 +11379,8 @@ h6, .h6 {
   vertical-align: middle; }
   .table tr:first-child td {
     padding-top: 20px; }
+  .table tr:hover > td {
+    background-color: rgba(26, 107, 175, 0.15); }
   .table tr td {
     color: #444444;
     letter-spacing: 0.04em;
@@ -11321,9 +11404,24 @@ h6, .h6 {
     width: 34px;
     height: 34px;
     border-radius: 50%;
-    transition: all 300ms ease; }
-    .table .table-action a:hover, .table .table-action a:focus {
-      background-color: rgba(26, 107, 175, 0.2); }
+    transition: all 300ms ease;
+    position: relative; }
+    .table .table-action a img {
+      position: relative;
+      z-index: 1; }
+    .table .table-action a::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) scale(0);
+      height: 34px;
+      width: 34px;
+      border-radius: 50%;
+      background-color: rgba(26, 107, 175, 0.2);
+      transition: all 0.3s ease-in-out; }
+    .table .table-action a:hover::after, .table .table-action a:focus::after {
+      transform: translate(-50%, -50%) scale(1); }
 
 .table-outer nav {
   display: flex; }
@@ -11337,17 +11435,26 @@ h6, .h6 {
     height: 32px;
     border: 1px solid #878787;
     border-radius: 50%;
-    letter-spacing: 0.04em;
     color: #878787;
     margin: 0 !important;
-    display: flex;
+    display: grid;
     align-items: center;
     justify-content: center;
+    padding: 0;
     box-shadow: none !important; }
+    .table-outer nav li a img {
+      display: block;
+      margin-bottom: 1px; }
     .table-outer nav li a.active {
       background-color: #1a6baf; }
     .table-outer nav li a:hover, .table-outer nav li a:focus {
       border-color: #1a6baf; }
+  .table-outer nav li:first-child a img {
+    margin-right: 1px; }
+  .table-outer nav li:last-child a img {
+    margin-left: 1px; }
+  .table-outer nav li:not(:first-child) a, .table-outer nav li:not(:last-child) a {
+    padding-top: 1px; }
   .table-outer nav .page-item:first-child .page-link {
     border-radius: 50%; }
   .table-outer nav .page-item:last-child .page-link {
@@ -11439,7 +11546,7 @@ h6, .h6 {
   width: 120px;
   height: 120px;
   content: "";
-  border: 2px solid #fb4f14;
+  border: 2px solid transparent;
   border-radius: 50%;
   display: block;
   position: absolute;
@@ -11448,7 +11555,7 @@ h6, .h6 {
 
 .circle canvas {
   vertical-align: middle;
-  border: 2px solid #fb4f14;
+  border: 2px solid transparent;
   border-radius: 50%; }
 
 .circle div {
@@ -11473,7 +11580,7 @@ h6, .h6 {
 
 .circle canvas {
   vertical-align: middle;
-  border: 2px solid #fb4f14;
+  border: 2px solid transparent;
   border-radius: 50%; }
 
 .circle div {
