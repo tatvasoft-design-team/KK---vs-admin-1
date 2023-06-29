@@ -645,6 +645,12 @@ h6 {
         position: relative;
         z-index: 1;
       }
+      &:first-of-type {
+        img {
+          height: 20px;
+          width: 20px;
+        }
+      }
       &::after {
         content: "";
         position: absolute;
