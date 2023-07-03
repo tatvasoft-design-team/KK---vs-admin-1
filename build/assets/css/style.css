@@ -10019,6 +10019,10 @@ a:hover {
   background: #8d9dab;
   border-radius: 10px; }
 
+input::-ms-reveal,
+input::-ms-clear {
+  display: none; }
+
 /* Button
 --------------------------------------------------------------------------------------------------------*/
 .btn,
