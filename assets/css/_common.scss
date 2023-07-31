@@ -354,7 +354,35 @@ a:hover {
 .btn-primary span:after {
   transition-delay: 0.4s;
 }
-
+.btn-outline-primary {
+  padding: 9px 14px;
+  border-radius: 12px;
+  position: relative;
+  background-color: transparent !important;
+  overflow: hidden;
+  color: #1a6baf !important;
+  span {
+    position: relative;
+    z-index: 1;
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    height: 100%;
+    width: 0;
+    // background: #1669ad;
+    background-color: #edf5fd;
+    transition: 0.3s ease-out;
+  }
+  &:hover {
+    &::after {
+      width: 100%;
+    }
+  }
+}
 .btn-secondary {
   font-size: 16px;
   line-height: 24px;
@@ -392,6 +420,23 @@ a:hover {
   margin-left: var(--sidebar-width);
 }
 
+/* Modal
+--------------------------------------------------------------------------------------------------------*/
+.modal {
+  .modal-header {
+    .btn-close {
+      opacity: 0.8;
+      border-radius: 50%;
+      box-shadow: none !important;
+      background-size: 15px;
+      padding: 10px;
+      transition: all 0.3s ease-out;
+      &:hover {
+        background-color: #e3f0fc;
+      }
+    }
+  }
+}
 /* File Upload
 --------------------------------------------------------------------------------------------------------*/
 .file-upload {

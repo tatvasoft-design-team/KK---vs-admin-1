@@ -126,7 +126,6 @@ window.addEventListener("DOMContentLoaded", function () {
     myFunction();
   }
 
-
   // Password Toggle
   let togglePassword = document.querySelector(".password-btn");
   if (togglePassword) {

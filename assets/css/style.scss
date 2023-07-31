@@ -573,6 +573,7 @@ h6 {
   margin-bottom: 10px;
 }
 .table-card {
+  overflow-y: visible;
   .card-header {
     margin-bottom: 10px;
   }
@@ -672,13 +673,24 @@ h6 {
       }
     }
   }
+  tbody {
+    tr {
+      td {
+        border-bottom: 1px solid #cac8c8;
+      }
+    }
+  }
 }
 .table-outer {
   nav {
     display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin: 8px 0;
     ul {
       margin-left: auto;
-      margin-top: 16px;
+      margin-bottom: 0;
     }
     li {
       &:not(:last-child) {
@@ -805,7 +817,37 @@ h6 {
   display: block;
   transform: scaleX(-1);
 }
-
+.record-select-wrapper {
+  display: flex;
+  align-items: center;
+  p {
+    margin-bottom: 0;
+  }
+  .form-floating {
+    min-width: 76px;
+    margin-left: 8px;
+    margin-bottom: 0;
+  }
+}
+.modal {
+  .form-floating {
+    margin-bottom: 20px;
+  }
+  .radio-grp {
+    padding-bottom: 0;
+  }
+  .radio-outer {
+    p {
+      margin-bottom: 8px;
+    }
+  }
+  .modal-footer {
+    .btn {
+      min-width: 100px;
+      border-radius: 8px;
+    }
+  }
+}
 /* CIRCLE PROGRESS BAR
 --------------------------------------------------------------------------------------------------------*/
 .progressbar {
@@ -1012,15 +1054,15 @@ h6 {
   h6 {
     margin-bottom: 10px;
   }
-  .table-outer nav ul {
-    margin-top: 8px;
-  }
   .chat-card .chat-block .message {
     font-size: 14px;
     line-height: 20px;
   }
   .sidebar .logo {
     margin-bottom: 26px;
+  }
+  .table-outer nav {
+    margin: 16px 0 8px;
   }
 }
 
@@ -1034,7 +1076,7 @@ h6 {
     margin-bottom: 16px;
   }
   .table-outer nav ul {
-    margin: 12px auto 0;
+    margin: 0 auto;
   }
   .header .navbar-nav .icon-btn span {
     height: 22px;
@@ -1059,5 +1101,11 @@ h6 {
   .other-sale ul li a {
     white-space: normal;
     align-items: flex-start;
+  }
+  .table-outer nav {
+    margin: 16px 0 0;
+  }
+  .record-select-wrapper {
+    margin: 0 auto;
   }
 }

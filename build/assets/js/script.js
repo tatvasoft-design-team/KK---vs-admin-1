@@ -1078,9 +1078,9 @@ window.addEventListener("DOMContentLoaded", function () {
   }
 
   // Chart JS
-  function myFunction() {
-    var ctx = document.getElementById("mainChart");
-    if (ctx) {
+  var ctx = document.getElementById("mainChart");
+  if (ctx) {
+    function myFunction() {
       ctx = ctx.getContext("2d");
       var myChart = new Chart(ctx, {
         type: "line",
@@ -1128,34 +1128,20 @@ window.addEventListener("DOMContentLoaded", function () {
         },
       });
     }
+    myFunction();
   }
-
-  myFunction();
-
-  function circularProgress() {
-    bar.animate(0.8); // Number from 0.0 to 1.0
-  }
-
-  // Progress Animation
-  gsap.registerPlugin(ScrollTrigger);
-  const anim1 = gsap.timeline({
-    scrollTrigger: {
-      trigger: ".sale-card",
-      start: "top 70%",
-      end: "+=500",
-      onEnter: circularProgress,
-    },
-  });
 
   // Password Toggle
   let togglePassword = document.querySelector(".password-btn");
-  const passwordInput = document.querySelector(".password-input");
-  togglePassword.addEventListener("click", () => {
-    togglePassword.classList.toggle("show-password");
-    if (passwordInput.getAttribute("type") === "password") {
-      passwordInput.setAttribute("type", "text");
-    } else {
-      passwordInput.setAttribute("type", "password");
-    }
-  });
+  if (togglePassword) {
+    const passwordInput = document.querySelector(".password-input");
+    togglePassword.addEventListener("click", () => {
+      togglePassword.classList.toggle("show-password");
+      if (passwordInput.getAttribute("type") === "password") {
+        passwordInput.setAttribute("type", "text");
+      } else {
+        passwordInput.setAttribute("type", "password");
+      }
+    });
+  }
 });

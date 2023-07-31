@@ -10267,6 +10267,29 @@ a:hover {
 .btn-primary span:after {
   transition-delay: 0.4s; }
 
+.btn-outline-primary {
+  padding: 9px 14px;
+  border-radius: 12px;
+  position: relative;
+  background-color: transparent !important;
+  overflow: hidden;
+  color: #1a6baf !important; }
+  .btn-outline-primary span {
+    position: relative;
+    z-index: 1; }
+  .btn-outline-primary::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    height: 100%;
+    width: 0;
+    background-color: #edf5fd;
+    transition: 0.3s ease-out; }
+  .btn-outline-primary:hover::after {
+    width: 100%; }
+
 .btn-secondary {
   font-size: 16px;
   line-height: 24px;
@@ -10295,6 +10318,18 @@ a:hover {
 .main {
   max-width: calc(100% - var(--sidebar-width));
   margin-left: var(--sidebar-width); }
+
+/* Modal
+--------------------------------------------------------------------------------------------------------*/
+.modal .modal-header .btn-close {
+  opacity: 0.8;
+  border-radius: 50%;
+  box-shadow: none !important;
+  background-size: 15px;
+  padding: 10px;
+  transition: all 0.3s ease-out; }
+  .modal .modal-header .btn-close:hover {
+    background-color: #e3f0fc; }
 
 /* File Upload
 --------------------------------------------------------------------------------------------------------*/
@@ -11352,8 +11387,10 @@ h6, .h6 {
 .table {
   margin-bottom: 10px; }
 
-.table-card .card-header {
-  margin-bottom: 10px; }
+.table-card {
+  overflow-y: visible; }
+  .table-card .card-header {
+    margin-bottom: 10px; }
 
 .table th {
   border-bottom: 1px solid #cac8c8;
@@ -11378,9 +11415,10 @@ h6, .h6 {
 .table tr {
   vertical-align: middle; }
   .table tr:first-child td {
-    padding-top: 20px; }
+    padding-top: 20px;
+    transition: all 0.3s; }
   .table tr:hover > td {
-    background-color: rgba(26, 107, 175, 0.15); }
+    background-color: #f4f7fa; }
   .table tr td {
     color: #444444;
     letter-spacing: 0.04em;
@@ -11409,6 +11447,9 @@ h6, .h6 {
     .table .table-action a img {
       position: relative;
       z-index: 1; }
+    .table .table-action a:first-of-type img {
+      height: 20px;
+      width: 20px; }
     .table .table-action a::after {
       content: "";
       position: absolute;
@@ -11423,11 +11464,18 @@ h6, .h6 {
     .table .table-action a:hover::after, .table .table-action a:focus::after {
       transform: translate(-50%, -50%) scale(1); }
 
+.table tbody tr td {
+  border-bottom: 1px solid #cac8c8; }
+
 .table-outer nav {
-  display: flex; }
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin: 8px 0; }
   .table-outer nav ul {
     margin-left: auto;
-    margin-top: 16px; }
+    margin-bottom: 0; }
   .table-outer nav li:not(:last-child) {
     margin-right: 10px; }
   .table-outer nav li a {
@@ -11525,6 +11573,29 @@ h6, .h6 {
   stroke-linecap: round;
   display: block;
   transform: scaleX(-1); }
+
+.record-select-wrapper {
+  display: flex;
+  align-items: center; }
+  .record-select-wrapper p {
+    margin-bottom: 0; }
+  .record-select-wrapper .form-floating {
+    min-width: 76px;
+    margin-left: 8px;
+    margin-bottom: 0; }
+
+.modal .form-floating {
+  margin-bottom: 20px; }
+
+.modal .radio-grp {
+  padding-bottom: 0; }
+
+.modal .radio-outer p {
+  margin-bottom: 8px; }
+
+.modal .modal-footer .btn {
+  min-width: 100px;
+  border-radius: 8px; }
 
 /* CIRCLE PROGRESS BAR
 --------------------------------------------------------------------------------------------------------*/
@@ -11691,13 +11762,13 @@ h6, .h6 {
     margin-bottom: 16px; }
   h6, .h6 {
     margin-bottom: 10px; }
-  .table-outer nav ul {
-    margin-top: 8px; }
   .chat-card .chat-block .message {
     font-size: 14px;
     line-height: 20px; }
   .sidebar .logo {
-    margin-bottom: 26px; } }
+    margin-bottom: 26px; }
+  .table-outer nav {
+    margin: 16px 0 8px; } }
 
 @media (max-width: 575px) {
   .innerpage .primary-heading, .card-header h4, .card-header .h4 {
@@ -11706,7 +11777,7 @@ h6, .h6 {
   .header-with-icon {
     margin-bottom: 16px; }
   .table-outer nav ul {
-    margin: 12px auto 0; }
+    margin: 0 auto; }
   .header .navbar-nav .icon-btn span {
     height: 22px;
     width: 22px; }
@@ -11723,4 +11794,8 @@ h6, .h6 {
     line-height: 22px; }
   .other-sale ul li a {
     white-space: normal;
-    align-items: flex-start; } }
+    align-items: flex-start; }
+  .table-outer nav {
+    margin: 16px 0 0; }
+  .record-select-wrapper {
+    margin: 0 auto; } }
